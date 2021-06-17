@@ -1,8 +1,0 @@
-git+https://github.com/Rapptz/discord.py@rewrite
-PyNaCl==1.4.0
-FFmpeg
-youtube_dl==6.6
-os
-asyncio
-random
-dnspython==2.1.0
