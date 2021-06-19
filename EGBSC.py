@@ -309,6 +309,7 @@ async def skipto(ctx, url : str):
       os.rename(file, "song.mp3")
     voice.play(discord.FFmpegPCMAudio("song.mp3"))
 # 6/17/21: HOLY FUCKING SHIT IT WORKED THE FIRST TRY
+# 6/18/21: Doesn't work on Heroku perma build -.-
 
 @client.command()
 async def stop(ctx):
@@ -317,7 +318,7 @@ async def stop(ctx):
   if (ctx.author.voice):
     channel = ctx.message.author.voice.channel
     await channel.connect()
-# play video commands
+# play audio commands
 
 # vcroulette commands
 
