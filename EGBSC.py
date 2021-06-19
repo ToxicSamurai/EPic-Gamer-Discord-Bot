@@ -53,22 +53,94 @@ stqDict = ['All warfare is based on deception.',
 
 aliceDict = [
   (
-
+    'https://cdn.discordapp.com/attachments/754550273963458580/855652111374614548/IMG_20200831_183005.jpg'
   ),
   (
-
+    'https://cdn.discordapp.com/attachments/754550273963458580/855652116386545684/IMG_20200806_173845.jpg'
+  ),
+  ( 
+   'https://cdn.discordapp.com/attachments/754550273963458580/855652156656844820/PXL_20210107_160047384.jpg' 
+  ),
+  (  
+    'https://cdn.discordapp.com/attachments/754550273963458580/855652160288981012/IMG_20200516_174122.jpg'
+  ),
+  ( 
+   'https://cdn.discordapp.com/attachments/754550273963458580/855652163094839306/IMG_20200529_170411.jpg' 
   ),
   (
-    
+   'https://cdn.discordapp.com/attachments/754550273963458580/855652166030065704/IMG_20200731_193226.jpg' 
   ),
   (
-    
+    'https://cdn.discordapp.com/attachments/754550273963458580/855652169814638602/PXL_20210408_020724054.jpg'
   ),
   (
-    
+    'https://cdn.discordapp.com/attachments/754550273963458580/855652173001654312/IMG_20200921_120242_1.jpg'
   ),
   (
-    
+    'https://cdn.discordapp.com/attachments/754550273963458580/855652175610380306/PXL_20210513_235525956.jpg'
+  ),
+  (
+    'https://cdn.discordapp.com/attachments/754550273963458580/855652176243327016/PXL_20210519_144613145.jpg'
+  ),
+  (
+    'https://cdn.discordapp.com/attachments/754550273963458580/855652178287263754/PXL_20201211_022649843.jpg'
+  ),
+  (
+    'https://cdn.discordapp.com/attachments/754550273963458580/855652186188808212/PXL_20210208_210008224.jpg'
+  ),
+  (
+    'https://cdn.discordapp.com/attachments/754550273963458580/855652200411562004/IMG_20200418_152601_1.jpg'
+  ),
+  (
+    'https://cdn.discordapp.com/attachments/754550273963458580/855652209415684116/PXL_20210611_131951501.jpg'
+  ),
+  (
+    'https://cdn.discordapp.com/attachments/754550273963458580/855652218002604032/PXL_20210415_164029682.jpg'
+  ),
+  (
+    'https://cdn.discordapp.com/attachments/754550273963458580/855652233293856768/IMG_20200702_192031.jpg'
+  ),
+  (
+    'https://cdn.discordapp.com/attachments/754550273963458580/855652246104571954/PXL_20210510_181410188.jpg'
+  ),
+  (
+    'https://cdn.discordapp.com/attachments/754550273963458580/855652248456527892/IMG_20200630_120718.jpg'
+  ),
+  (
+    'https://cdn.discordapp.com/attachments/754550273963458580/855652253422845962/PXL_20210331_202402846.jpg'
+  ),
+  (
+    'https://cdn.discordapp.com/attachments/754550273963458580/855652268878856222/PXL_20210510_171141783.jpg'
+  ),
+  (
+    'https://cdn.discordapp.com/attachments/754550273963458580/855652272838803476/PXL_20201231_173054318.jpg'
+  ),
+  (
+    'https://cdn.discordapp.com/attachments/754550273963458580/855652274789548082/PXL_20210608_202945409.jpg'
+  ),
+  (
+    'https://cdn.discordapp.com/attachments/754550273963458580/855652277092220948/PXL_20210219_195317001.jpg'
+  ),
+  (
+    'https://cdn.discordapp.com/attachments/754550273963458580/855652285451337728/PXL_20210420_125124332.jpg'
+  ),
+  (
+    'https://cdn.discordapp.com/attachments/754550273963458580/855652296086781952/IMG_20200609_161143.jpg'
+  ),
+  (
+    'https://cdn.discordapp.com/attachments/754550273963458580/855652299094229002/PXL_20210407_203045868.jpg'
+  ),
+  (
+    'https://cdn.discordapp.com/attachments/754550273963458580/855652301213794314/IMG_20200527_182029.jpg'
+  ),
+  (
+    'https://cdn.discordapp.com/attachments/754550273963458580/855652303260352532/IMG_20200429_101638.jpg'
+  ),
+  (
+    'https://cdn.discordapp.com/attachments/754550273963458580/855652305302061096/PXL_20210424_004705409.jpg'
+  ),
+  (
+    'https://cdn.discordapp.com/attachments/754550273963458580/855652307031425064/PXL_20210315_143303507.jpg'
   ),
   ]
 # dictionary for Jacob's cat photos
@@ -246,7 +318,7 @@ async def breakme(ctx):
 
 @client.command()
 async def help(ctx):
-  await ctx.send("```\nCommands:\n$stq - Sun Tzu Quotes\n$twitch - Twitch link\n$call - @ here\n$phys - Scientific papers link\n$navyseals - Navy Seals Copypasta\n$adam - Adam Wilson\n$vcroulette - Coming soon\n$rejoin/$rejoinbtp - Discord invite link\n$APIref - Documentation\n$join/leave - Lets the bot join/leave your current vc\n$play url - Plays a youtube url (must be in vc with bot)\n$skipto url - Skips current url for next url\n$stop - Stops all urls\nPrefixes:\nHurr/Durr - Hurrguy/Durrguy\nRed sus - red sus before\nWhen the imposter is sus - sus!\nI'm - Dad joke\nPog - WOO BABY\nP(a)edophile - Uno reverse\nYa\'ll - Corrects your ignorant mistake\nSussy - sussus amogus```")
+  await ctx.send("```\nCommands:\n$stq - Sun Tzu Quotes\n$twitch - Twitch link\n$call - @ here\n$phys - Scientific papers link\n$navyseals - Navy Seals Copypasta\n$adam - Adam Wilson\n$vcroulette - Coming soon\n$rejoin/$rejoinbtp - Discord invite link\n$APIref - Documentation\n$join/leave - Lets the bot join/leave your current vc\n$play url - Plays a youtube url (must be in vc with bot)\n$skipto url - Skips current url for next url\n$stop - Stops all urls\nPrefixes:\n$alice - Pictures of Jacob's cat\nHurr/Durr - Hurrguy/Durrguy\nRed sus - red sus before\nWhen the imposter is sus - sus!\nI'm - Dad joke\nPog - WOO BABY\nP(a)edophile - Uno reverse\nYa\'ll - Corrects your ignorant mistake\nSussy - sussus amogus```")
 
 # vc commands----------------------------------------------
 @client.command()
