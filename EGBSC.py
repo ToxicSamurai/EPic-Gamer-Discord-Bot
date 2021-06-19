@@ -355,6 +355,11 @@ client.run('ODAyMjU2ODY3Mjg4MDIzMDUx.YAsl7g.5Z6E_SyEnKzj-DHPBITA0FKYJ94')
 #  "git add ."
 #  "git push heroku master"
 
+#create a new requirements.txt
+# Go to save repo
+# Type cmd into location bar
+#"pip freeze > requirements.txt"
+
 #sources: 
 # discord.py discord
 # https://discordpy.readthedocs.io/en/stable/api.html
