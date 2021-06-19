@@ -364,7 +364,7 @@ client.run('ODAyMjU2ODY3Mjg4MDIzMDUx.YAsl7g.5Z6E_SyEnKzj-DHPBITA0FKYJ94')
 # discord.py discord
 # https://discordpy.readthedocs.io/en/stable/api.html
 # https://stackoverflow.com/questions/65891543/how-would-i-respond-to-a-message-with-what-the-user-said
-# https://github.com/discordjs/discord.js/issues/439
+# https://github.com/discordjs/discord.js/issues/439 
 # https://realpython.com/how-to-make-a-discord-bot-python/
 # https://stackoverflow.com/questions/49076798/discord-py-add-role-to-someone
 # https://stackoverflow.com/questions/49286640/how-to-set-bots-status
