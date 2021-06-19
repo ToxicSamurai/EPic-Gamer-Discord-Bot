@@ -73,6 +73,28 @@ aliceDict = [
   ]
 # dictionary for Jacob's cat photos
 
+cuteGun = [
+  (
+    'https://cdn.discordapp.com/attachments/745438682902954104/854567181031178250/image0.png'
+  ),
+  (
+
+  ),
+  (
+    
+  ),
+  (
+    
+  ),
+  (
+    
+  ),
+  (
+    
+  ),
+  ]
+# dictionary for cute guns
+
 @client.event
 async def on_ready():
     await client.change_presence(status=discord.Status.do_not_disturb, activity=discord.Game('$help! Being Scarlett\'s little test bitch'))
