@@ -145,28 +145,6 @@ aliceDict = [
   ]
 # dictionary for Jacob's cat photos
 
-cuteGun = [
-  (
-    'https://cdn.discordapp.com/attachments/745438682902954104/854567181031178250/image0.png'
-  ),
-  (
-
-  ),
-  (
-    
-  ),
-  (
-    
-  ),
-  (
-    
-  ),
-  (
-    
-  ),
-  ]
-# dictionary for cute guns
-
 @client.event
 async def on_ready():
     await client.change_presence(status=discord.Status.do_not_disturb, activity=discord.Game('$help! Being Scarlett\'s little test bitch'))
@@ -404,6 +382,7 @@ async def skipto(ctx, url : str):
     voice.play(discord.FFmpegPCMAudio("song.mp3"))
 # 6/17/21: HOLY FUCKING SHIT IT WORKED THE FIRST TRY
 # 6/18/21: Doesn't work on Heroku perma build -.-
+# 6/18/21: Works on Heroku perma build, FFmpeg wasn't installed on Heroku
 
 @client.command()
 async def stop(ctx):
@@ -418,7 +397,7 @@ async def stop(ctx):
 
 client.run('ODAyMjU2ODY3Mjg4MDIzMDUx.YAsl7g.5Z6E_SyEnKzj-DHPBITA0FKYJ94')
 
-#Steps to push to Heroku
+#steps to push to Heroku
 # Go to save repo
 # Type cmd into location bar
 #  "heroku login"
@@ -427,7 +406,7 @@ client.run('ODAyMjU2ODY3Mjg4MDIzMDUx.YAsl7g.5Z6E_SyEnKzj-DHPBITA0FKYJ94')
 #  "git add ."
 #  "git push heroku master"
 
-#create a new requirements.txt
+#steps to create a new requirements.txt
 # Go to save repo
 # Type cmd into location bar
 #"pip freeze > requirements.txt"
