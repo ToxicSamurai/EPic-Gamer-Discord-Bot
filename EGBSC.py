@@ -192,7 +192,7 @@ async def vttoxic(ctx):
 
 @client.command()
 async def call(ctx):
-  await ctx.send("@everyone")
+  await ctx.send("@here")
 
 @client.command()
 async def adam(ctx):
@@ -224,7 +224,7 @@ async def breakme(ctx):
 
 @client.command()
 async def help(ctx):
-  await ctx.send("```\nCommands:\n$stq - Sun Tzu Quotes\n$twitch - Twitch link\n$call - @ everyone\n$phys - Scientific papers link\n$navyseals - Navy Seals Copypasta\n$adam - Adam Wilson\n$vcroulette - Coming soon\n$rejoin/$rejoinbtp - Discord invite link\n$APIref - Documentation\n$join/leave - Lets the bot join/leave your current vc\n$play url - Plays a youtube url (must be in vc with bot)\n$skipto url - Skips current url for next url\n$stop - Stops all urls\nPrefixes:\nHurr/Durr - Hurrguy/Durrguy\nRed sus - red sus before\nWhen the imposter is sus - sus!\nI'm - Dad joke\nPog - WOO BABY\nP(a)edophile - Uno reverse\nYa\'ll - Corrects your ignorant mistake\nSussy - sussus amogus```")
+  await ctx.send("```\nCommands:\n$stq - Sun Tzu Quotes\n$twitch - Twitch link\n$call - @ here\n$phys - Scientific papers link\n$navyseals - Navy Seals Copypasta\n$adam - Adam Wilson\n$vcroulette - Coming soon\n$rejoin/$rejoinbtp - Discord invite link\n$APIref - Documentation\n$join/leave - Lets the bot join/leave your current vc\n$play url - Plays a youtube url (must be in vc with bot)\n$skipto url - Skips current url for next url\n$stop - Stops all urls\nPrefixes:\nHurr/Durr - Hurrguy/Durrguy\nRed sus - red sus before\nWhen the imposter is sus - sus!\nI'm - Dad joke\nPog - WOO BABY\nP(a)edophile - Uno reverse\nYa\'ll - Corrects your ignorant mistake\nSussy - sussus amogus```")
 
 # vc commands----------------------------------------------
 @client.command()
@@ -322,6 +322,15 @@ async def stop(ctx):
 # vcroulette commands
 
 client.run('ODAyMjU2ODY3Mjg4MDIzMDUx.YAsl7g.5Z6E_SyEnKzj-DHPBITA0FKYJ94')
+
+#Steps to push to Heroku
+# Go to save repo
+# Type cmd into location bar
+#  "heroku login"
+#  Enter
+#  "git commit -am "word""
+#  "git add ."
+#  "git push heroku master"
 
 #sources: 
 # discord.py discord
