@@ -302,6 +302,10 @@ async def help(ctx):
 async def clips(ctx):
   await ctx.send("https://www.youtube.com/channel/UCBPqyaDCISZlXQXOZJbEPCw")
 
+@client.command()
+async def updateBot(ctx):
+  await ctx.send("Bot updated to 1.4.7!")
+
 # vc commands----------------------------------------------
 @client.command()
 async def join(ctx):
