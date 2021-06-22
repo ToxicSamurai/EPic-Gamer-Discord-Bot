@@ -26,7 +26,7 @@ gameOver = True
 board = []
 # array for game board in tic-tac-toe
 
-winningConditions = [
+winConditions = [
   [0, 1, 2],
   [3, 4, 5],
   [6, 7, 8],
@@ -43,31 +43,31 @@ stqDict = ['All warfare is based on deception.',
      'Throw your soldiers into positions whence there is no escape, and they will prefer death to flight' 
     ),
     (
-'The supreme art of war is to subdue the enemy without fighting.'
+      'The supreme art of war is to subdue the enemy without fighting.'
     ),
     (
       'Hence to fight and conquer in all your battles is not supreme excellence; supreme excellence consists in breaking the enemys resistance without fighting.'
     ),
     (
-'Victorious warriors win first and then go to war, while defeated warriors go to war first and then seek to win.'
+      'Victorious warriors win first and then go to war, while defeated warriors go to war first and then seek to win.'
     ),
     (
-'Strategy without tactics is the slowest route to victory. Tactics without strategy is the noise before defeat.'
+      'Strategy without tactics is the slowest route to victory. Tactics without strategy is the noise before defeat.'
     ),
     (
-'Opportunities multiply as they are seized'
+      'Opportunities multiply as they are seized'
     ),
     (
-'The opportunity to secure ourselves against defeat lies in our own hands, but the opportunity of defeating the enemy is provided by the enemy himself.'
+      'The opportunity to secure ourselves against defeat lies in our own hands, but the opportunity of defeating the enemy is provided by the enemy himself.'
     ),
     (
-'There is no instance of a nation benefitting from prolonged warfare.'
+      'There is no instance of a nation benefitting from prolonged warfare.'
     ),
     (
-'Pretend inferiority and encourage his arrogance.'
+      'Pretend inferiority and encourage his arrogance.'
     ),
     (
-'The good fighters of old first put themselves beyond the possibility of defeat, and then waited for an opportunity of defeating the enemy.'
+      'The good fighters of old first put themselves beyond the possibility of defeat, and then waited for an opportunity of defeating the enemy.'
     ),
     ]
 # dictionary for Sun Tzu Quotes
@@ -430,7 +430,7 @@ async def stop(ctx):
     await channel.connect()
 # stops song by leaving and rejoining 
 # play audio commands
-
+'''
 @client.command()
 async def tictactoe(ctx, p1 : discord.Member, p2 : discord.Member)
   global player1
@@ -443,19 +443,106 @@ async def tictactoe(ctx, p1 : discord.Member, p2 : discord.Member)
     global board [":white_large_square:", ":white_large_square:", ":white_large_square:",
     ":white_large_square:", ":white_large_square:", ":white_large_square:",
     ":white_large_square:", ":white_large_square:", ":white_large_square:", ]
-  turn = ""
-  gameOver = False
-  count = 0
+    turn = ""
+    gameOver = False
+    count = 0
 
-  player1 = p1
-  plater2 = p2
+    player1 = p1
+    plater2 = p2
 
-  line = ""
-  for x in range(len(board)):
+    line = ""
+    for x in range(len(board)):
+      if x == 2 or x == 5 or x == 8:
+        line += " " + board[x]
+        await ctx.send(line)
+        line = ""
+      else:
+        line += " " + board[x]
+    # prints the board
 
-  # prints the board
+    num = random.randint(1, 2)
+    if num == 1:
+      turn = player1
+     await ctx.send("It's <@" + str(player1.id) + ">'s turn!")
+    elif num == 2:
+      turn = player2
+     await ctx.send("It's <@" + str(player2.id) + ">'s turn!")
+    # determines the turn order
+  else:
+    await ctx.send("A game is already in progress!")
+# initializes game
+
+@client.comand()
+async def place(ctx, pos : int):
+  global turn
+  global player1
+  global player2
+  global board
+  global count
+
+  if not gameOver:
+    mark = ""
+    if turn == ctx.author:
+      if turn == player1:
+        mark = ":regional_indicator_x:"
+      elif turn == player2:
+        mark = ":o2:"
+      if 0 < pos < 10 and board[pos - 1] == ":white_large_square:":
+        board[pos - 1] = mark
+        count += 1
+
+        line = ""
+        for x in range(len(board)):
+          if x == 2 or x == 5 or x == 8:
+           line += " " + board[x]
+           ctx.send(line)
+           line = ""
+          else:
+            line += " " + board[x]
+          # prints board again
+
+        checkWinner(winConditions, mark)
+        if gameOver:
+          await ctx.send(mark + " wins!")
+        elif count >= 9:
+          await ctx.send("Tie!")
+
+        if turn == player1:
+          turn = player2
+        elif turn == player2:
+          turn = player1
+        # alternates turns
+
+      else
+        await ctx.send("Your number must be between 1 and 9 and be on an unmarked tile!")
+    else:
+      await ctx.send("It is not your turn!")
+  else:
+    await ctx.send("Please start a new game!")
+
+def checkWinner(winConditions, mark):
+  global gameOver
+  for condition in winConditions:
+    if board[condition[0]] == mark and board[condition[1]] == mark and board[condition[2]] == mark:
+      gameOver = True
+
+@tictactoe.error
+async def tictactoe_error(ctx, error):
+  if isinstance(error, commands.MissingRequiredArgument):
+    await ctx.send("Please mention 2 players!")
+  elif isinstance(error, commands.BadArgument):
+    await ctx.send("Please make sure to mention players!")
+# error handler for tic tac toe initilization
+
+@place.error
+async def place_error(ctx, error):
+  if isinstance(error, commands.MissingRequiredArgument):
+    await ctx.send("Please enter a position!")
+  elif isinstance(error, commands.BadArgument):
+     ctx.send("Please enter a number!")
+# error handler for tic tac toe command
 # tic-tac-toe commands
-
+'''
 client.run('ODAyMjU2ODY3Mjg4MDIzMDUx.YAsl7g.5Z6E_SyEnKzj-DHPBITA0FKYJ94')
 
 #steps to push to Heroku
@@ -476,6 +563,7 @@ client.run('ODAyMjU2ODY3Mjg4MDIzMDUx.YAsl7g.5Z6E_SyEnKzj-DHPBITA0FKYJ94')
 # retroactive 1.0: stq update, 1.1, prefix update, 1.2 command update, 1.3 vc update, 1.4 alice update
 # 1.4.7: created $clips, edited $help
 # 1.4.8: created $vcHelp, created and removed an HTTP Error 429 override, $updated $help, edited $help
+# 1.4.9: updated stq dictionary, updated $vcHelp, 1.5 code implemented but unused NOT DEPLOYED
 
 #sources: 
 # discord.py discord
@@ -492,4 +580,5 @@ client.run('ODAyMjU2ODY3Mjg4MDIzMDUx.YAsl7g.5Z6E_SyEnKzj-DHPBITA0FKYJ94')
   # https://www.youtube.com/watch?v=pL2EuhSV7tw
 #https://www.youtube.com/channel/UCdNnHNkhaRYr-3nhQqY7_dw
   #https://www.youtube.com/watch?v=ml-5tXRmmFk
+  #https://www.youtube.com/watch?v=wBbgCUQZNzM 
 #https://stackoverflow.com/questions/22786068/how-to-avoid-http-error-429-too-many-requests-python
