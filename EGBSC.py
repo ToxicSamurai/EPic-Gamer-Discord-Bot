@@ -17,6 +17,27 @@ client.remove_command('help')
 players = {}
 # sets music player ids
 
+player1 = ""
+player2 = ""
+turn = ""
+gameOver = True
+# variables for tic-tac-toe
+
+board = []
+# array for game board in tic-tac-toe
+
+winningConditions = [
+  [0, 1, 2],
+  [3, 4, 5],
+  [6, 7, 8],
+  [0, 3, 6],
+  [1, 4, 7],
+  [2, 5, 8],
+  [0, 4, 8],
+  [2, 4, 6]
+]
+# win condition array (coordinates) for tic-tac-toe
+
 stqDict = ['All warfare is based on deception.',
     (
      'Throw your soldiers into positions whence there is no escape, and they will prefer death to flight' 
@@ -308,7 +329,7 @@ async def updateBot(ctx):
 
 @client.command()
 async def vcHelp(ctx):
-  await ctx.send("```\nThis bot can play audio from a link! Use these commands:\n$play url - Plays audio from the url\n$skipto url - Skips current song and plays audio from the url\n$stop - Stops music")
+  await ctx.send("```\nThis bot can play audio from a link! Use these commands:\n$play url - Plays audio from the url\n$skipto url - Skips current song and plays audio from the url\n$stop - Stops music```")
 
 # vc commands----------------------------------------------
 @client.command()
@@ -410,7 +431,30 @@ async def stop(ctx):
 # stops song by leaving and rejoining 
 # play audio commands
 
-# vcroulette commands
+@client.command()
+async def tictactoe(ctx, p1 : discord.Member, p2 : discord.Member)
+  global player1
+  global player2
+  global turn
+  global gameOver
+  global count
+
+  if gameOver:
+    global board [":white_large_square:", ":white_large_square:", ":white_large_square:",
+    ":white_large_square:", ":white_large_square:", ":white_large_square:",
+    ":white_large_square:", ":white_large_square:", ":white_large_square:", ]
+  turn = ""
+  gameOver = False
+  count = 0
+
+  player1 = p1
+  plater2 = p2
+
+  line = ""
+  for x in range(len(board)):
+
+  # prints the board
+# tic-tac-toe commands
 
 client.run('ODAyMjU2ODY3Mjg4MDIzMDUx.YAsl7g.5Z6E_SyEnKzj-DHPBITA0FKYJ94')
 
