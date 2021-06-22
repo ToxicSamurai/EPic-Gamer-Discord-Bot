@@ -296,7 +296,7 @@ async def breakme(ctx):
 
 @client.command()
 async def help(ctx):
-  await ctx.send("```\nCommands:\n$stq - Sun Tzu Quotes\n$twitch - Twitch link\n$call - @ here\n$phys - Scientific papers link\n$navyseals - Navy Seals Copypasta\n$adam - Adam Wilson\n$vcroulette - Coming soon\n$rejoin/$rejoinbtp - Discord invite link\n$APIref - Documentation\n$join/leave - Lets the bot join/leave your current vc\n$play url - Plays a youtube url (must be in vc with bot)\n$skipto url - Skips current url for next url\n$stop - Stops all urls\n$alice - Pictures of Jacob's cat\n$clips - Link to Scarlett's clips channel\nPrefixes:\nHurr/Durr - Hurrguy/Durrguy\nRed sus - red sus before\nWhen the imposter is sus - sus!\nI'm - Dad joke\nPog - WOO BABY\nP(a)edophile - Uno reverse\nYa\'ll - Corrects your ignorant mistake\nSussy - sussus amogus```")
+  await ctx.send("```\nCommands:\n$stq - Sun Tzu Quotes\n$twitch - Twitch link\n$call - @ here\n$phys - Scientific papers link\n$navyseals - Navy Seals Copypasta\n$adam - Adam Wilson\n$vcroulette - Coming soon\n$rejoin/$rejoinbtp - Discord invite link\n$APIref - Documentation\n$join/leave - Lets the bot join/leave your current vc\n$vcHelp\n$alice - Pictures of Jacob's cat\n$clips - Link to Scarlett's clips channel\nPrefixes:\nHurr/Durr - Hurrguy/Durrguy\nRed sus - red sus before\nWhen the imposter is sus - sus!\nI'm - Dad joke\nPog - WOO BABY\nP(a)edophile - Uno reverse\nYa\'ll - Corrects your ignorant mistake\nSussy - sussus amogus```")
 
 @client.command()
 async def clips(ctx):
@@ -305,6 +305,10 @@ async def clips(ctx):
 @client.command()
 async def updateBot(ctx):
   await ctx.send("Bot updated to 1.4.7!")
+
+@client.command()
+async def vcHelp(ctx):
+  await ctx.send("")
 
 # vc commands----------------------------------------------
 @client.command()
@@ -399,6 +403,19 @@ async def stop(ctx):
   if (ctx.author.voice):
     channel = ctx.message.author.voice.channel
     await channel.connect()
+
+ class TooManyRequests(Exception):
+"""Too many requests"""
+
+@task(
+   rate_limit='10/s',
+   autoretry_for=(ConnectTimeout, TooManyRequests,),
+   retry_backoff=True)
+def api(*args, **kwargs):
+  r = requests.get('placeholder-external-api')
+
+  if r.status_code == 429:
+    raise TooManyRequests()   
 # play audio commands
 
 # vcroulette commands
@@ -421,8 +438,8 @@ client.run('ODAyMjU2ODY3Mjg4MDIzMDUx.YAsl7g.5Z6E_SyEnKzj-DHPBITA0FKYJ94')
 
 #changelog
 # retroactive 1.0: stq update, 1.1, prefix update, 1.2 command update, 1.3 vc update, 1.4 alice update
-# 1.4.7: added $clips, edited $help
-# 1.4.8: updated $help, NOT DEPLOYED
+# 1.4.7: created $clips, edited $help
+# 1.4.8: created $vcHelp, $updated $help, edited $help NOT DEPLOYED
 
 #sources: 
 # discord.py discord
@@ -439,3 +456,4 @@ client.run('ODAyMjU2ODY3Mjg4MDIzMDUx.YAsl7g.5Z6E_SyEnKzj-DHPBITA0FKYJ94')
   # https://www.youtube.com/watch?v=pL2EuhSV7tw
 #https://www.youtube.com/channel/UCdNnHNkhaRYr-3nhQqY7_dw
   #https://www.youtube.com/watch?v=ml-5tXRmmFk
+#https://stackoverflow.com/questions/22786068/how-to-avoid-http-error-429-too-many-requests-python
