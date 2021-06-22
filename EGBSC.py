@@ -357,6 +357,7 @@ async def play(ctx, url : str):
     if file.endswith(".mp3"):
       os.rename(file, "song.mp3")
     voice.play(discord.FFmpegPCMAudio("song.mp3"))
+# plays a link
 # 6/16/21: I spent 6 fucking hours trying to figure out why it didn't work because it said it was already connected
 # 6/16/21: It was because I did fucking $join before $play god fucking damnit
 
@@ -392,9 +393,11 @@ async def skipto(ctx, url : str):
     if file.endswith(".mp3"):
       os.rename(file, "song.mp3")
     voice.play(discord.FFmpegPCMAudio("song.mp3"))
+# skips the song by leaving, rejoining, and playing song
 # 6/17/21: HOLY FUCKING SHIT IT WORKED THE FIRST TRY
 # 6/18/21: Doesn't work on Heroku perma build -.-
 # 6/18/21: Works on Heroku perma build, FFmpeg wasn't installed on Heroku
+# 6/22/21: Playlists like half work, it'll play the first song and occasionally the second upon next url req
 
 @client.command()
 async def stop(ctx):
@@ -403,8 +406,9 @@ async def stop(ctx):
   if (ctx.author.voice):
     channel = ctx.message.author.voice.channel
     await channel.connect()
+# stops song by leaving and rejoining
 
- class TooManyRequests(Exception):
+class TooManyRequests(Exception):
 """Too many requests"""
 
 @task(
@@ -415,7 +419,8 @@ def api(*args, **kwargs):
   r = requests.get('placeholder-external-api')
 
   if r.status_code == 429:
-    raise TooManyRequests()   
+    raise TooManyRequests()
+# overrides HTTP Error 429  
 # play audio commands
 
 # vcroulette commands
@@ -439,7 +444,7 @@ client.run('ODAyMjU2ODY3Mjg4MDIzMDUx.YAsl7g.5Z6E_SyEnKzj-DHPBITA0FKYJ94')
 #changelog
 # retroactive 1.0: stq update, 1.1, prefix update, 1.2 command update, 1.3 vc update, 1.4 alice update
 # 1.4.7: created $clips, edited $help
-# 1.4.8: created $vcHelp, $updated $help, edited $help NOT DEPLOYED
+# 1.4.8: created $vcHelp, created an HTTP Error 429 override , $updated $help, edited $help NOT DEPLOYED
 
 #sources: 
 # discord.py discord
