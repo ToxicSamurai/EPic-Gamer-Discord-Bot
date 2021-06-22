@@ -296,7 +296,7 @@ async def breakme(ctx):
 
 @client.command()
 async def help(ctx):
-  await ctx.send("```\nCommands:\n$stq - Sun Tzu Quotes\n$twitch - Twitch link\n$call - @ here\n$phys - Scientific papers link\n$navyseals - Navy Seals Copypasta\n$adam - Adam Wilson\n$vcroulette - Coming soon\n$rejoin/$rejoinbtp - Discord invite link\n$APIref - Documentation\n$join/leave - Lets the bot join/leave your current vc\n$play url - Plays a youtube url (must be in vc with bot)\n$skipto url - Skips current url for next url\n$stop - Stops all urls\nPrefixes:\n$alice - Pictures of Jacob's cat\n$clips - Link to Scarlett's clips channel\nHurr/Durr - Hurrguy/Durrguy\nRed sus - red sus before\nWhen the imposter is sus - sus!\nI'm - Dad joke\nPog - WOO BABY\nP(a)edophile - Uno reverse\nYa\'ll - Corrects your ignorant mistake\nSussy - sussus amogus```")
+  await ctx.send("```\nCommands:\n$stq - Sun Tzu Quotes\n$twitch - Twitch link\n$call - @ here\n$phys - Scientific papers link\n$navyseals - Navy Seals Copypasta\n$adam - Adam Wilson\n$vcroulette - Coming soon\n$rejoin/$rejoinbtp - Discord invite link\n$APIref - Documentation\n$join/leave - Lets the bot join/leave your current vc\n$play url - Plays a youtube url (must be in vc with bot)\n$skipto url - Skips current url for next url\n$stop - Stops all urls\n$alice - Pictures of Jacob's cat\n$clips - Link to Scarlett's clips channel\nPrefixes:\nHurr/Durr - Hurrguy/Durrguy\nRed sus - red sus before\nWhen the imposter is sus - sus!\nI'm - Dad joke\nPog - WOO BABY\nP(a)edophile - Uno reverse\nYa\'ll - Corrects your ignorant mistake\nSussy - sussus amogus```")
 
 @client.command()
 async def clips(ctx):
@@ -387,7 +387,7 @@ async def skipto(ctx, url : str):
   for file in os.listdir("./"):
     if file.endswith(".mp3"):
       os.rename(file, "song.mp3")
-    voice.play(discord.FFmpegPCMAudio("song.mp3"))
+    voice.play(discord.FFmpegPCMAudio("C:\Users\aliso\Desktop\Discord Bot save repo\song.mp3"))
 # 6/17/21: HOLY FUCKING SHIT IT WORKED THE FIRST TRY
 # 6/18/21: Doesn't work on Heroku perma build -.-
 # 6/18/21: Works on Heroku perma build, FFmpeg wasn't installed on Heroku
@@ -418,6 +418,11 @@ client.run('ODAyMjU2ODY3Mjg4MDIzMDUx.YAsl7g.5Z6E_SyEnKzj-DHPBITA0FKYJ94')
 # Go to save repo
 # Type cmd into location bar
 #"pip freeze > requirements.txt"
+
+#changelog
+# retroactive 1.0: stq update, 1.1, prefix update, 1.2 command update, 1.3 vc update, 1.4 alice update
+# 1.4.7: added $clips, edited $help
+# 1.4.8: updated $help, NOT DEPLOYED
 
 #sources: 
 # discord.py discord
