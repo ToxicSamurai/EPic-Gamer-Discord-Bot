@@ -325,7 +325,7 @@ async def clips(ctx):
 
 @client.command()
 async def updateBot(ctx):
-  await ctx.send("Bot updated to 1.4.8!")
+  await ctx.send("Bot updated to 1.4.9!")
 
 @client.command()
 async def vcHelp(ctx):
