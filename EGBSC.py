@@ -304,11 +304,11 @@ async def clips(ctx):
 
 @client.command()
 async def updateBot(ctx):
-  await ctx.send("Bot updated to 1.4.7!")
+  await ctx.send("Bot updated to 1.4.8!")
 
 @client.command()
 async def vcHelp(ctx):
-  await ctx.send("```\nThis bot can play audio from a link! Use these commands:\n$play url - Plays audio from a url\n$skipto url - Skips current song and ")
+  await ctx.send("```\nThis bot can play audio from a link! Use these commands:\n$play url - Plays audio from the url\n$skipto url - Skips current song and plays audio from the url\n$stop - Stops music")
 
 # vc commands----------------------------------------------
 @client.command()
@@ -398,6 +398,7 @@ async def skipto(ctx, url : str):
 # 6/18/21: Doesn't work on Heroku perma build -.-
 # 6/18/21: Works on Heroku perma build, FFmpeg wasn't installed on Heroku
 # 6/22/21: Playlists like half work, it'll play the first song and occasionally the second upon next url req
+# 6/22/21: Rewrite imminent. Fuck.
 
 @client.command()
 async def stop(ctx):
@@ -430,7 +431,7 @@ client.run('ODAyMjU2ODY3Mjg4MDIzMDUx.YAsl7g.5Z6E_SyEnKzj-DHPBITA0FKYJ94')
 #changelog
 # retroactive 1.0: stq update, 1.1, prefix update, 1.2 command update, 1.3 vc update, 1.4 alice update
 # 1.4.7: created $clips, edited $help
-# 1.4.8: created $vcHelp, created and removed an HTTP Error 429 override (trying to find alternate way to playlist), $updated $help, edited $help NOT DEPLOYED
+# 1.4.8: created $vcHelp, created and removed an HTTP Error 429 override, $updated $help, edited $help
 
 #sources: 
 # discord.py discord
