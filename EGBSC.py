@@ -308,7 +308,7 @@ async def updateBot(ctx):
 
 @client.command()
 async def vcHelp(ctx):
-  await ctx.send("")
+  await ctx.send("```\nThis bot can play audio from a link! Use these commands:\n$play url - Plays audio from a url\n$skipto url - Skips current song and ")
 
 # vc commands----------------------------------------------
 @client.command()
@@ -406,21 +406,7 @@ async def stop(ctx):
   if (ctx.author.voice):
     channel = ctx.message.author.voice.channel
     await channel.connect()
-# stops song by leaving and rejoining
-
-class TooManyRequests(Exception):
-"""Too many requests"""
-
-@task(
-   rate_limit='10/s',
-   autoretry_for=(ConnectTimeout, TooManyRequests,),
-   retry_backoff=True)
-def api(*args, **kwargs):
-  r = requests.get('placeholder-external-api')
-
-  if r.status_code == 429:
-    raise TooManyRequests()
-# overrides HTTP Error 429  
+# stops song by leaving and rejoining 
 # play audio commands
 
 # vcroulette commands
@@ -444,7 +430,7 @@ client.run('ODAyMjU2ODY3Mjg4MDIzMDUx.YAsl7g.5Z6E_SyEnKzj-DHPBITA0FKYJ94')
 #changelog
 # retroactive 1.0: stq update, 1.1, prefix update, 1.2 command update, 1.3 vc update, 1.4 alice update
 # 1.4.7: created $clips, edited $help
-# 1.4.8: created $vcHelp, created an HTTP Error 429 override , $updated $help, edited $help NOT DEPLOYED
+# 1.4.8: created $vcHelp, created and removed an HTTP Error 429 override (trying to find alternate way to playlist), $updated $help, edited $help NOT DEPLOYED
 
 #sources: 
 # discord.py discord
