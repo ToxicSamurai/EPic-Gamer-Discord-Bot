@@ -387,7 +387,7 @@ async def skipto(ctx, url : str):
   for file in os.listdir("./"):
     if file.endswith(".mp3"):
       os.rename(file, "song.mp3")
-    voice.play(discord.FFmpegPCMAudio("C:\Users\aliso\Desktop\Discord Bot save repo\song.mp3"))
+    voice.play(discord.FFmpegPCMAudio("song.mp3"))
 # 6/17/21: HOLY FUCKING SHIT IT WORKED THE FIRST TRY
 # 6/18/21: Doesn't work on Heroku perma build -.-
 # 6/18/21: Works on Heroku perma build, FFmpeg wasn't installed on Heroku
