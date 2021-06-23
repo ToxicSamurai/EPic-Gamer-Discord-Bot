@@ -482,11 +482,7 @@ async def tictactoe(ctx, p1: discord.Member, p2: discord.Member):
     await ctx.send("A game is already in progress!")
   
   if str(player1.id) == str(player2.id):
-    if not gameOver:
-      gameOver = True
-      await ctx.send("Current game cancelled!")
-    else:
-      await ctx.send("There's no game currently running!")
+    gameOver = True
     await ctx.send("Mentioned a different player other than yourself!")
 # initializes game
 # 6/23/21: Worked like the fourth time lmao
