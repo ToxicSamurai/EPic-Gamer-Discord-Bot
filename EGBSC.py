@@ -337,8 +337,8 @@ async def changelog(ctx):
 
 @client.command()
 async def tttHelp(ctx):
-  await ctx.send("```This bot can allow two players to play tic tac toe over Discord! Use these commands:\n$tictactoe @player1 @player2 - Creates a tic tac toe game between two pinged players\n$place number  - Places an X or O on a tile (must be in a game and number must be between 1 and 9)```")
-
+  await ctx.send("```This bot can allow two players to play tic tac toe over Discord! Use these commands:\n$tictactoe @player1 @player2 - Creates a tic tac toe game between two pinged players\n$place number  - Places an X or O on a tile (must be in a game and number must be between 1 and 9)\n$endgame - Ends the current game```")
+  
 # vc commands----------------------------------------------
 @client.command()
 async def join(ctx):
@@ -539,6 +539,15 @@ def checkWinner(winConditions, mark):
       gameOver = True
 # checks to see if anyone has won
 
+@client.command()
+async def endgame(ctx):
+  global gameOver
+  if not gameOver:
+    gameOver = True
+    await ctx.send("Current game cancelled!")
+  else:
+    await ctx.send("There's no game currently running!")
+
 @tictactoe.error
 async def tictactoe_error(ctx, error):
   if isinstance(error, commands.MissingRequiredArgument):
@@ -580,6 +589,7 @@ client.run('ODAyMjU2ODY3Mjg4MDIzMDUx.YAsl7g.5Z6E_SyEnKzj-DHPBITA0FKYJ94')
 # 1.4.10: testing for 1.5 has begun, created $changelog
 # 1.4.11: fixed many errors in 1.5 update, updated $changelog
 # 1.5.0: Created $tictactoe and $place (allows 2 players to play tictactoe), created non-asynchronous command checkWinner to check win conditions in a game, created error handlers for tic tac toe (tictactoe_error and place_error), updated $help, created $tttHelp
+# 1.5.1: Created $endgame, updated $tttHelp
 
 #sources: 
 # discord.py discord
