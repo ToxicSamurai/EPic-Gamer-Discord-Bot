@@ -518,7 +518,7 @@ async def place(ctx, pos : int):
           turn = player1
         # alternates turns
 
-      else
+      else:
         await ctx.send("Your number must be between 1 and 9 and be on an unmarked tile!")
     else:
       await ctx.send("It is not your turn!")
@@ -569,7 +569,7 @@ client.run('ODAyMjU2ODY3Mjg4MDIzMDUx.YAsl7g.5Z6E_SyEnKzj-DHPBITA0FKYJ94')
 # 1.4.7: created $clips, edited $help
 # 1.4.8: created $vcHelp, created and removed an HTTP Error 429 override, $updated $help, edited $help
 # 1.4.9: updated stq dictionary, updated $vcHelp, 1.5 code implemented but unused
-# 1.4.10: testing for 1.5 has begun, created $changelog NOT DEPLOYED
+# 1.4.10: testing for 1.5 has begun, created $changelog
 
 #sources: 
 # discord.py discord
