@@ -331,6 +331,10 @@ async def updateBot(ctx):
 async def vcHelp(ctx):
   await ctx.send("```\nThis bot can play audio from a link! Use these commands:\n$play url - Plays audio from the url\n$skipto url - Skips current song and plays audio from the url\n$stop - Stops music```")
 
+@client.command()
+async def changelog(ctx):
+  await ctx.send("placeholder 6/22/21")
+
 # vc commands----------------------------------------------
 @client.command()
 async def join(ctx):
@@ -430,7 +434,7 @@ async def stop(ctx):
     await channel.connect()
 # stops song by leaving and rejoining 
 # play audio commands
-'''
+
 @client.command()
 async def tictactoe(ctx, p1 : discord.Member, p2 : discord.Member)
   global player1
@@ -542,7 +546,7 @@ async def place_error(ctx, error):
      ctx.send("Please enter a number!")
 # error handler for tic tac toe command
 # tic-tac-toe commands
-'''
+
 client.run('ODAyMjU2ODY3Mjg4MDIzMDUx.YAsl7g.5Z6E_SyEnKzj-DHPBITA0FKYJ94')
 
 #steps to push to Heroku
@@ -563,7 +567,8 @@ client.run('ODAyMjU2ODY3Mjg4MDIzMDUx.YAsl7g.5Z6E_SyEnKzj-DHPBITA0FKYJ94')
 # retroactive 1.0: stq update, 1.1, prefix update, 1.2 command update, 1.3 vc update, 1.4 alice update
 # 1.4.7: created $clips, edited $help
 # 1.4.8: created $vcHelp, created and removed an HTTP Error 429 override, $updated $help, edited $help
-# 1.4.9: updated stq dictionary, updated $vcHelp, 1.5 code implemented but unused NOT DEPLOYED
+# 1.4.9: updated stq dictionary, updated $vcHelp, 1.5 code implemented but unused
+# 1.4.10: testing for 1.5 has begun, created $changelog NOT DEPLOYED
 
 #sources: 
 # discord.py discord
@@ -580,5 +585,5 @@ client.run('ODAyMjU2ODY3Mjg4MDIzMDUx.YAsl7g.5Z6E_SyEnKzj-DHPBITA0FKYJ94')
   # https://www.youtube.com/watch?v=pL2EuhSV7tw
 #https://www.youtube.com/channel/UCdNnHNkhaRYr-3nhQqY7_dw
   #https://www.youtube.com/watch?v=ml-5tXRmmFk
-  #https://www.youtube.com/watch?v=wBbgCUQZNzM 
+  #https://www.youtube.com/watch?v=wBbgCUQZNzM
 #https://stackoverflow.com/questions/22786068/how-to-avoid-http-error-429-too-many-requests-python
