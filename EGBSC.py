@@ -436,23 +436,24 @@ async def stop(ctx):
 # play audio commands
 
 @client.command()
-async def tictactoe(ctx, p1 : discord.Member, p2 : discord.Member)
+async def tictactoe(ctx, p1: discord.Member, p2: discord.Member):
+  global count
   global player1
   global player2
   global turn
   global gameOver
-  global count
 
   if gameOver:
-    global board [":white_large_square:", ":white_large_square:", ":white_large_square:",
-    ":white_large_square:", ":white_large_square:", ":white_large_square:",
-    ":white_large_square:", ":white_large_square:", ":white_large_square:", ]
+    global board
+    board = [":white_large_square:", ":white_large_square:", ":white_large_square:",
+             ":white_large_square:", ":white_large_square:", ":white_large_square:",
+             ":white_large_square:", ":white_large_square:", ":white_large_square:"]
     turn = ""
     gameOver = False
     count = 0
 
     player1 = p1
-    plater2 = p2
+    player2 = p2
 
     line = ""
     for x in range(len(board)):
