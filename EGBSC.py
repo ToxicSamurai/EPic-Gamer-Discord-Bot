@@ -325,7 +325,7 @@ async def clips(ctx):
 
 @client.command()
 async def updateBot(ctx):
-  await ctx.send("Bot updated to 1.4.9!")
+  await ctx.send("Bot updated to 1.4.10!")
 
 @client.command()
 async def vcHelp(ctx):
@@ -333,7 +333,7 @@ async def vcHelp(ctx):
 
 @client.command()
 async def changelog(ctx):
-  await ctx.send("placeholder 6/22/21")
+  await ctx.send("Updated stq dictionary, Updated $vcHelp")
 
 # vc commands----------------------------------------------
 @client.command()
@@ -468,10 +468,10 @@ async def tictactoe(ctx, p1: discord.Member, p2: discord.Member):
     num = random.randint(1, 2)
     if num == 1:
       turn = player1
-     await ctx.send("It's <@" + str(player1.id) + ">'s turn!")
+      await ctx.send("It's <@" + str(player1.id) + ">'s turn!")
     elif num == 2:
       turn = player2
-     await ctx.send("It's <@" + str(player2.id) + ">'s turn!")
+      await ctx.send("It's <@" + str(player2.id) + ">'s turn!")
     # determines the turn order
   else:
     await ctx.send("A game is already in progress!")
