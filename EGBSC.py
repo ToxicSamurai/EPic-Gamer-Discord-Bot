@@ -499,9 +499,9 @@ async def place(ctx, pos : int):
         line = ""
         for x in range(len(board)):
           if x == 2 or x == 5 or x == 8:
-           line += " " + board[x]
-           ctx.send(line)
-           line = ""
+            line += " " + board[x]
+            await ctx.send(line)
+            line = ""
           else:
             line += " " + board[x]
           # prints board again
