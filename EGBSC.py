@@ -480,6 +480,14 @@ async def tictactoe(ctx, p1: discord.Member, p2: discord.Member):
     # determines the turn order
   else:
     await ctx.send("A game is already in progress!")
+  
+  if str(player1.id) == str(player2.id):
+    if not gameOver:
+      gameOver = True
+      await ctx.send("Current game cancelled!")
+    else:
+      await ctx.send("There's no game currently running!")
+    await ctx.send("Mentioned a different player other than yourself!")
 # initializes game
 # 6/23/21: Worked like the fourth time lmao
 
@@ -588,8 +596,9 @@ client.run('ODAyMjU2ODY3Mjg4MDIzMDUx.YAsl7g.5Z6E_SyEnKzj-DHPBITA0FKYJ94')
 # 1.4.9: updated stq dictionary, updated $vcHelp, 1.5 code implemented but unused
 # 1.4.10: testing for 1.5 has begun, created $changelog
 # 1.4.11: fixed many errors in 1.5 update, updated $changelog
-# 1.5.0: Created $tictactoe and $place (allows 2 players to play tictactoe), created non-asynchronous command checkWinner to check win conditions in a game, created error handlers for tic tac toe (tictactoe_error and place_error), updated $help, created $tttHelp
-# 1.5.1: Created $endgame, updated $tttHelp
+# 1.5.0: created $tictactoe and $place (allows 2 players to play tictactoe), created non-asynchronous command checkWinner to check win conditions in a game, created error handlers for tic tac toe (tictactoe_error and place_error), updated $help, created $tttHelp
+# 1.5.1: created $endgame, updated $tttHelp
+# 1.5.2: edited $tictactoe to prevent playing with one player (484, 3)
 
 #sources: 
 # discord.py discord
