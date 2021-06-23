@@ -325,7 +325,7 @@ async def clips(ctx):
 
 @client.command()
 async def updateBot(ctx):
-  await ctx.send("Bot updated to 1.4.10!")
+  await ctx.send("Bot updated to 1.4.11!")
 
 @client.command()
 async def vcHelp(ctx):
@@ -477,7 +477,7 @@ async def tictactoe(ctx, p1: discord.Member, p2: discord.Member):
     await ctx.send("A game is already in progress!")
 # initializes game
 
-@client.comand()
+@client.command()
 async def place(ctx, pos : int):
   global turn
   global player1
@@ -570,6 +570,7 @@ client.run('ODAyMjU2ODY3Mjg4MDIzMDUx.YAsl7g.5Z6E_SyEnKzj-DHPBITA0FKYJ94')
 # 1.4.8: created $vcHelp, created and removed an HTTP Error 429 override, $updated $help, edited $help
 # 1.4.9: updated stq dictionary, updated $vcHelp, 1.5 code implemented but unused
 # 1.4.10: testing for 1.5 has begun, created $changelog
+# 1.4.11: fixed many errors in 1.5 update, updated $changelog
 
 #sources: 
 # discord.py discord
