@@ -325,7 +325,7 @@ async def clips(ctx):
 
 @client.command()
 async def updateBot(ctx):
-  await ctx.send("Bot updated to 1.5.3!")
+  await ctx.send("Bot updated to 1.5.4!")
 
 @client.command()
 async def vcHelp(ctx):
@@ -333,11 +333,11 @@ async def vcHelp(ctx):
 
 @client.command()
 async def changelog(ctx):
-  await ctx.send("1.5.3: Edited $tictactoe so the one player countermeasure is determined before the player who starts is determined, updated $tttHelp")
+  await ctx.send("1.5.4: edited $tictactoe to make 1.5.3 work, edited $tttHelp")
 
 @client.command()
 async def tttHelp(ctx):
-  await ctx.send("```This bot allows two different players to play tic tac toe over Discord! Use these commands:\n$tictactoe @player1 @player2 - Creates a tic tac toe game between two pinged players\n$place number  - Places an X or O on a tile (must be in a game and number must be between 1 and 9)\n$endgame - Ends the current game\nYou can't play tic tac toe by yourself currently. The turn order is determined randomly.```")
+  await ctx.send("```This bot allows two different players to play tic tac toe over Discord! Use these commands:\n$tictactoe @player1 @player2 - Creates a tic tac toe game between two pinged players\n$place number  - Places an X or O on a tile (must be in a game and number must be between 1 and 9)\n$endgame - Ends the current game\nYou can't play tic tac toe by yourself currently.\nThe turn order is determined randomly.```")
   
 # vc commands----------------------------------------------
 @client.command()
@@ -469,14 +469,13 @@ async def tictactoe(ctx, p1: discord.Member, p2: discord.Member):
       else:
         line += " " + board[x]
     # prints the board
-
   
   if str(player1.id) == str(player2.id):
     gameOver = True
     await ctx.send("Mentioned a different player other than yourself!")
     # prevents a player playing with themselves
     # 6/23/21: Worked the first time lmao, just needs some refining. I made this segment entirely myself and I'm proud as fuck
-
+  else:
     num = random.randint(1, 2)
     if num == 1:
       turn = player1
@@ -599,6 +598,7 @@ client.run('ODAyMjU2ODY3Mjg4MDIzMDUx.YAsl7g.5Z6E_SyEnKzj-DHPBITA0FKYJ94')
 # 1.5.1: created $endgame, updated $tttHelp
 # 1.5.2: edited $tictactoe to prevent playing with one player (484, 3), updated $tttHelp
 # 1.5.3: edited $tictactoe so the one player countermeasure is determined before the player who starts is determined, updated $tttHelp
+# 1.5.4: edited $tictactoe to make 1.5.3 work, edited $tttHelp
 
 #sources: 
 # discord.py discord
