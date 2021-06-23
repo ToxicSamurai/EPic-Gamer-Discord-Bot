@@ -325,7 +325,7 @@ async def clips(ctx):
 
 @client.command()
 async def updateBot(ctx):
-  await ctx.send("Bot updated to 1.5.0!")
+  await ctx.send("Bot updated to 1.5.1!")
 
 @client.command()
 async def vcHelp(ctx):
@@ -333,7 +333,7 @@ async def vcHelp(ctx):
 
 @client.command()
 async def changelog(ctx):
-  await ctx.send("1.5.0: Created $tictactoe and $place (allows 2 players to play tictactoe), updated $help, created $tttHelp")
+  await ctx.send("1.5.1: Created $endgame, updated $tttHelp")
 
 @client.command()
 async def tttHelp(ctx):
