@@ -317,7 +317,7 @@ async def breakme(ctx):
 
 @client.command()
 async def help(ctx):
-  await ctx.send("```\nCommands:\n$stq - Sun Tzu Quotes\n$twitch - Twitch link\n$call - @ here\n$phys - Scientific papers link\n$navyseals - Navy Seals Copypasta\n$adam - Adam Wilson\n$vcroulette - Coming soon\n$rejoin/$rejoinbtp - Discord invite link\n$APIref - Documentation\n$join/leave - Lets the bot join/leave your current vc\n$vcHelp\n$alice - Pictures of Jacob's cat\n$clips - Link to Scarlett's clips channel\nPrefixes:\nHurr/Durr - Hurrguy/Durrguy\nRed sus - red sus before\nWhen the imposter is sus - sus!\nI'm - Dad joke\nPog - WOO BABY\nP(a)edophile - Uno reverse\nYa\'ll - Corrects your ignorant mistake\nSussy - sussus amogus```")
+  await ctx.send("```\nCommands:\n$stq - Sun Tzu Quotes\n$twitch - Twitch link\n$call - @ here\n$phys - Scientific papers link\n$navyseals - Navy Seals Copypasta\n$adam - Adam Wilson\n$vcroulette - Coming soon\n$rejoin/$rejoinbtp - Discord invite link\n$APIref - Documentation\n$join/leave - Lets the bot join/leave your current vc\n$vcHelp - Displays help for voice channel commands\n$tttHelp - Displays help for tic tac toe commands\n$alice - Pictures of Jacob's cat\n$clips - Link to Scarlett's clips channel\nPrefixes:\nHurr/Durr - Hurrguy/Durrguy\nRed sus - red sus before\nWhen the imposter is sus - sus!\nI'm - Dad joke\nPog - WOO BABY\nP(a)edophile - Uno reverse\nYa\'ll - Corrects your ignorant mistake\nSussy - sussus amogus```")
 
 @client.command()
 async def clips(ctx):
@@ -325,7 +325,7 @@ async def clips(ctx):
 
 @client.command()
 async def updateBot(ctx):
-  await ctx.send("Bot updated to 1.4.11!")
+  await ctx.send("Bot updated to 1.5.0!")
 
 @client.command()
 async def vcHelp(ctx):
@@ -333,7 +333,11 @@ async def vcHelp(ctx):
 
 @client.command()
 async def changelog(ctx):
-  await ctx.send("Updated stq dictionary, Updated $vcHelp")
+  await ctx.send("1.5.0: Created $tictactoe and $place (allows 2 players to play tictactoe), updated $help, created $tttHelp")
+
+@client.command()
+async def tttHelp(ctx):
+  await ctx.send("```This bot can allow two players to play tic tac toe over Discord! Use these commands:\n$tictactoe @player1 @player2 - Creates a tic tac toe game between two pinged players\n$place number  - Places an X or O on a tile (must be in a game and number must be between 1 and 9)```")
 
 # vc commands----------------------------------------------
 @client.command()
@@ -435,6 +439,7 @@ async def stop(ctx):
 # stops song by leaving and rejoining 
 # play audio commands
 
+# tic-tac-toe commands ----------------------------------------------
 @client.command()
 async def tictactoe(ctx, p1: discord.Member, p2: discord.Member):
   global count
@@ -476,6 +481,7 @@ async def tictactoe(ctx, p1: discord.Member, p2: discord.Member):
   else:
     await ctx.send("A game is already in progress!")
 # initializes game
+# 6/23/21: Worked like the fourth time lmao
 
 @client.command()
 async def place(ctx, pos : int):
@@ -524,12 +530,14 @@ async def place(ctx, pos : int):
       await ctx.send("It is not your turn!")
   else:
     await ctx.send("Please start a new game!")
+# place tile command
 
 def checkWinner(winConditions, mark):
   global gameOver
   for condition in winConditions:
     if board[condition[0]] == mark and board[condition[1]] == mark and board[condition[2]] == mark:
       gameOver = True
+# checks to see if anyone has won
 
 @tictactoe.error
 async def tictactoe_error(ctx, error):
@@ -546,7 +554,6 @@ async def place_error(ctx, error):
   elif isinstance(error, commands.BadArgument):
      ctx.send("Please enter a number!")
 # error handler for tic tac toe command
-# tic-tac-toe commands
 
 client.run('ODAyMjU2ODY3Mjg4MDIzMDUx.YAsl7g.5Z6E_SyEnKzj-DHPBITA0FKYJ94')
 
@@ -565,12 +572,14 @@ client.run('ODAyMjU2ODY3Mjg4MDIzMDUx.YAsl7g.5Z6E_SyEnKzj-DHPBITA0FKYJ94')
 #"pip freeze > requirements.txt"
 
 #changelog
+# updated $updateBot and $changelog should be assumed
 # retroactive 1.0: stq update, 1.1, prefix update, 1.2 command update, 1.3 vc update, 1.4 alice update
 # 1.4.7: created $clips, edited $help
 # 1.4.8: created $vcHelp, created and removed an HTTP Error 429 override, $updated $help, edited $help
 # 1.4.9: updated stq dictionary, updated $vcHelp, 1.5 code implemented but unused
 # 1.4.10: testing for 1.5 has begun, created $changelog
 # 1.4.11: fixed many errors in 1.5 update, updated $changelog
+# 1.5.0: Created $tictactoe and $place (allows 2 players to play tictactoe), created non-asynchronous command checkWinner to check win conditions in a game, created error handlers for tic tac toe (tictactoe_error and place_error), updated $help, created $tttHelp
 
 #sources: 
 # discord.py discord
