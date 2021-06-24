@@ -750,6 +750,7 @@ async def place_error(ctx, error):
 # error handler for tic tac toe command
 
 # doge commands----------------------------------------------
+@client.command()
 async def doge(ctx):
   num = random.randint(1, 1000)
   if num >= 1 and num <= 1000 and num != 10 and num != 20 and num != 30 and num != 40 and num != 110 and num != 120 and num != 130 and num != 140 and num != 210 and num != 220 and num != 230 and num != 240 and num != 310 and num != 320 and num !=330 and num != 333 and num != 340 and num !=410 and num != 420 and num != 430 and num != 440 and num != 510 and num != 520 and num != 530 and num !=540 and num != 610 and num != 620 and num !=630 and num != 640 and num != 666 and num != 710 and num != 720 and num != 730 and num != 740 and num != 810 and num != 820 and num != 830 and num != 840 and num != 910 and num != 920 and num != 930 and num != 940:
