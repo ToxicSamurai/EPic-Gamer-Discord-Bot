@@ -168,7 +168,7 @@ aliceDict = [
 
 @client.event
 async def on_ready():
-    await client.change_presence(status=discord.Status.do_not_disturb, activity=discord.Game('$help! Being Scarlett\'s little test bitch'))
+    await client.change_presence(status=discord.Status.do_not_disturb, activity=discord.Game('1.5 released! Use $tttHelp'))
     # sets the presence for the bot
     print('Logged in as {0.user}'.format(client))
     print('_____________________________________')
