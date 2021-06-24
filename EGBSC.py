@@ -325,7 +325,7 @@ async def clips(ctx):
 
 @client.command()
 async def updateBot(ctx):
-  await ctx.send("Bot updated to 1.5.4!")
+  await ctx.send("Bot updated to 1.5.5!")
 
 @client.command()
 async def vcHelp(ctx):
@@ -333,12 +333,17 @@ async def vcHelp(ctx):
 
 @client.command()
 async def changelog(ctx):
-  await ctx.send("1.5.4: edited $tictactoe to make 1.5.3 work, edited $tttHelp")
+  await ctx.send("1.5.5: created $useless, edited $help")
 
 @client.command()
 async def tttHelp(ctx):
   await ctx.send("```This bot allows two different players to play tic tac toe over Discord! Use these commands:\n$tictactoe @player1 @player2 - Creates a tic tac toe game between two pinged players\n$place number  - Places an X or O on a tile (must be in a game and number must be between 1 and 9)\n$endgame - Ends the current game\nYou can't play tic tac toe by yourself currently.\nThe turn order is determined randomly.```")
   
+@client.command()
+async def useless(ctx, amount=1):
+  await ctx.channel.purge(limit=amount)
+  await ctx.send("This command is useless, stop using it.", delete_after=5)
+
 # vc commands----------------------------------------------
 @client.command()
 async def join(ctx):
@@ -425,7 +430,7 @@ async def skipto(ctx, url : str):
 # skips the song by leaving, rejoining, and playing song
 # 6/17/21: HOLY FUCKING SHIT IT WORKED THE FIRST TRY
 # 6/18/21: Doesn't work on Heroku perma build -.-
-# 6/18/21: Works on Heroku perma build, FFmpeg wasn't installed on Heroku
+# 6/18/21: Works on Heroku perma build, FFmpeg wasn't installed on Heroku lulw
 # 6/22/21: Playlists like half work, it'll play the first song and occasionally the second upon next url req
 # 6/22/21: Rewrite imminent. Fuck.
 
@@ -599,6 +604,7 @@ client.run('ODAyMjU2ODY3Mjg4MDIzMDUx.YAsl7g.5Z6E_SyEnKzj-DHPBITA0FKYJ94')
 # 1.5.2: edited $tictactoe to prevent playing with one player (484, 3), updated $tttHelp
 # 1.5.3: edited $tictactoe so the one player countermeasure is determined before the player who starts is determined, updated $tttHelp
 # 1.5.4: edited $tictactoe to make 1.5.3 work, edited $tttHelp
+# 1.5.5: created $useless, edited $help
 
 #sources: 
 # discord.py discord
