@@ -752,7 +752,7 @@ async def place_error(ctx, error):
 # doge commands----------------------------------------------
 async def doge(ctx):
   num = random.randint(1, 1000)
-  if num >= 1 or <= 1000 and != 10 and != 20 and != 30 and != 40 and != 110 and != 120 and != 130 and != 140 and != 210 and != 220 and != 230 and != 240 and != 310 and != 320 and !=330 and != 333 and != 340 and !=410 and != 420 and != 430 and != 440 and != 510 and != 520 and != 530 and !=540 and != 610 and != 620 and !=630 and != 640 and != 666 and != 710 and != 720 and != 730 and != 740 and != 810 and != 820 and != 830 and != 840 and != 910 and != 920 and != 930 and != 940:
+  if num >= 1 and <= 1000 and != 10 and != 20 and != 30 and != 40 and != 110 and != 120 and != 130 and != 140 and != 210 and != 220 and != 230 and != 240 and != 310 and != 320 and !=330 and != 333 and != 340 and !=410 and != 420 and != 430 and != 440 and != 510 and != 520 and != 530 and !=540 and != 610 and != 620 and !=630 and != 640 and != 666 and != 710 and != 720 and != 730 and != 740 and != 810 and != 820 and != 830 and != 840 and != 910 and != 920 and != 930 and != 940:
     await ctx.send(Common doge!)
     await ctx.send("https://cdn.discordapp.com/attachments/802258582950117430/857745875555975178/5845e770fb0b0755fa99d7f4.png")
   # normal doge command
