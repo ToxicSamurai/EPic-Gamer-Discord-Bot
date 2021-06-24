@@ -323,7 +323,7 @@ lennyDict = [
 
 @client.event
 async def on_ready():
-    await client.change_presence(status=discord.Status.do_not_disturb, activity=discord.Game('1.5 released! Use $tttHelp'))
+    await client.change_presence(status=discord.Status.do_not_disturb, activity=discord.Game('1.6 released! $doge! Being Scarlett\'s little test bitch'))
     # sets the presence for the bot
     print('Logged in as {0.user}'.format(client))
     print('_____________________________________')
