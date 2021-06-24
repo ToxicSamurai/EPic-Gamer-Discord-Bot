@@ -472,7 +472,7 @@ async def breakme(ctx):
 
 @client.command()
 async def help(ctx):
-  await ctx.send("```\nCommands:\n$stq - Sun Tzu Quotes\n$twitch - Twitch link\n$call - @ here\n$phys - Scientific papers link\n$navyseals - Navy Seals Copypasta\n$adam - Adam Wilson\n$vcroulette - Coming soon\n$rejoin/$rejoinbtp - Discord invite link\n$APIref - Documentation\n$join/leave - Lets the bot join/leave your current vc\n$vcHelp - Displays help for voice channel commands\n$tttHelp - Displays help for tic tac toe commands\n$alice - Pictures of Jacob's cat\n$clips - Link to Scarlett's clips channel\n$lenny - Posts a random lenny face\nPrefixes:\nHurr/Durr - Hurrguy/Durrguy\nRed sus - red sus before\nWhen the imposter is sus - sus!\nI'm - Dad joke\nPog - WOO BABY\nP(a)edophile - Uno reverse\nYa\'ll - Corrects your ignorant mistake\nSussy - sussus amogus```")
+  await ctx.send("```\nCommands:\n$stq - Sun Tzu Quotes\n$twitch - Twitch link\n$call - @ here\n$phys - Scientific papers link\n$navyseals - Navy Seals Copypasta\n$adam - Adam Wilson\n$vcroulette - Coming soon\n$rejoin/$rejoinbtp - Discord invite link\n$APIref - Documentation\n$join/leave - Lets the bot join/leave your current vc\n$vcHelp - Displays help for voice channel commands\n$tttHelp - Displays help for tic tac toe commands\n$alice - Pictures of Jacob's cat\n$clips - Clips channel link\n$lenny - Posts a random lenny face\n$sources - Links to sources I used to create this bot\nPrefixes:\nHurr/Durr - Hurrguy/Durrguy\nRed sus - red sus before\nWhen the imposter is sus - sus!\nI'm - Dad joke\nPog - WOO BABY\nP(a)edophile - Uno reverse\nYa\'ll - Corrects your ignorant mistake\nSussy - sussus amogus```")
 
 @client.command()
 async def clips(ctx):
@@ -480,7 +480,7 @@ async def clips(ctx):
 
 @client.command()
 async def updateBot(ctx):
-  await ctx.send("Bot updated to 1.5.5.2!")
+  await ctx.send("Bot updated to 1.5.5.3!")
 
 @client.command()
 async def vcHelp(ctx):
@@ -488,7 +488,7 @@ async def vcHelp(ctx):
 
 @client.command()
 async def changelog(ctx):
-  await ctx.send("1.5.5.2: updated $tictactoe to prevent playing with the bot and breaking the game, updated $tttHelp")
+  await ctx.send("1.5.5.3: created $sources, edited $help, disabled tictactoe countermeasures 2 and 3")
 
 @client.command()
 async def tttHelp(ctx):
@@ -503,6 +503,10 @@ async def useless(ctx, amount=1):
 async def lenny(ctx):
   response = random.choice(lennyDict)
   await ctx.send(response)
+
+@client.command()
+async def sources(ctx):
+  await ctx.send('Bot sources:\ndiscord.py discord\nhttps://discordpy.readthedocs.io/en/stable/api.html\nhttps://stackoverflow.com/questions/65891543/how-would-i-respond-to-a-message-with-what-the-user-said\nhttps://github.com/discordjs/discord.js/issues/439\nhttps://realpython.com/how-to-make-a-discord-bot-python/\nhttps://stackoverflow.com/questions/49076798/discord-py-add-role-to-someone\nhttps://stackoverflow.com/questions/49286640/how-to-set-bots-status\nhttps://stackoverflow.com/questions/63493179/nameerror-name-bot-is-not-defined\nhttps://www.youtube.com/channel/UCR-zOCvDCayyYy1flR5qaAg\nhttps://www.youtube.com/watch?v=K5pkOrjeAIs\nhttps://www.youtube.com/channel/UCwBjRPUuOefh6iFvG6zLhrg\nhttps://www.youtube.com/watch?v=pL2EuhSV7tw\nhttps://www.youtube.com/channel/UCdNnHNkhaRYr-3nhQqY7_dw\nhttps://www.youtube.com/watch?v=ml-5tXRmmFk\nhttps://www.youtube.com/watch?v=wBbgCUQZNzM\nhttps://stackoverflow.com/questions/22786068/how-to-avoid-http-error-429-too-many-requests-python')
 
 # vc commands----------------------------------------------
 @client.command()
@@ -641,13 +645,14 @@ async def tictactoe(ctx, p1: discord.Member, p2: discord.Member):
     await ctx.send("Mention a different player other than yourself!")
     # prevents a player playing with themselves
     # 6/23/21: Worked the first time lmao, just needs some refining. I made this segment entirely myself and I'm proud as fuck
-  elif str(player1.id) == str(playerBot.id):
-    gameOver = True
-    await ctx.send("Mention a different player other than the bot!")
-  elif str(player2.id) == str(playerBot.id):
-    gameOver = True
-    await ctx.send("Mention a different player other than the bot!")
+  #elif str(player1.id) == str(playerBot.id):
+    #gameOver = True
+    #await ctx.send("Mention a different player other than the bot!")
+  #elif str(player2.id) == str(playerBot.id):
+    #gameOver = True
+    #await ctx.send("Mention a different player other than the bot!")
     # prevents a player playing with the bot
+    # 6/24/21: doesn't work, needs to be fixed or replaced with the bot playing
   elif str(player1.id) != str(player2.id):
     num = random.randint(1, 2)
     if num == 1:
@@ -776,6 +781,7 @@ client.run('ODAyMjU2ODY3Mjg4MDIzMDUx.YAsl7g.5Z6E_SyEnKzj-DHPBITA0FKYJ94')
 # 1.5.5: created $useless, edited $help
 # 1.5.5.1: updated $useless, created $lenny, created lenny dictionary, edited $help
 # 1.5.5.2: updated $tictactoe to prevent playing with the bot and breaking the game and some spelling errors, updated $tttHelp
+# 1.5.5.3: 1.5.5.3: created $sources, edited $help, disabled tictactoe countermeasures 2 and 3
 
 #sources: 
 # discord.py discord
