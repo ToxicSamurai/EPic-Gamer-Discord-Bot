@@ -472,7 +472,7 @@ async def breakme(ctx):
 
 @client.command()
 async def help(ctx):
-  await ctx.send("```\nCommands:\n$stq - Sun Tzu Quotes\n$twitch - Twitch link\n$call - @ here\n$phys - Scientific papers link\n$navyseals - Navy Seals Copypasta\n$adam - Adam Wilson\n$vcroulette - Coming soon\n$rejoin/$rejoinbtp - Discord invite link\n$APIref - Documentation\n$join/leave - Lets the bot join/leave your current vc\n$vcHelp - Displays help for voice channel commands\n$tttHelp - Displays help for tic tac toe commands\n$alice - Pictures of Jacob's cat\n$clips - Clips channel link\n$lenny - Posts a random lenny face\n$sources - Links to sources I used to create this bot\n$useless - This command is useless, do not use it.\nPrefixes:\nHurr/Durr - Hurrguy/Durrguy\nRed sus - red sus before\nWhen the imposter is sus - sus!\nI'm - Dad joke\nPog - WOO BABY\nP(a)edophile - Uno reverse\nYa\'ll - Corrects your ignorant mistake\nSussy - sussus amogus```")
+  await ctx.send("```\nCommands:\n$stq - Sun Tzu Quotes\n$twitch - Twitch link\n$call - @ here\n$phys - Scientific papers link\n$navyseals - Navy Seals Copypasta\n$adam - Adam Wilson\n$vcroulette - Coming soon\n$rejoin/$rejoinbtp - Discord invite link\n$APIref - Documentation\n$join/leave - Lets the bot join/leave your current vc\n$vcHelp - Displays help for voice channel commands\n$tttHelp - Displays help for tic tac toe commands\n$alice - Pictures of Jacob's cat\n$clips - Clips channel link\n$lenny - Posts a random lenny face\n$sources - Links to sources I used to create this bot\n$useless - This command is useless, do not use it.\n$doge - Posts a doge, however there's a chance for a rare or ultra rare doge\nPrefixes:\nHurr/Durr - Hurrguy/Durrguy\nRed sus - red sus before\nWhen the imposter is sus - sus!\nI'm - Dad joke\nPog - WOO BABY\nP(a)edophile - Uno reverse\nYa\'ll - Corrects your ignorant mistake\nSussy - sussus amogus```")
 
 @client.command()
 async def clips(ctx):
@@ -480,20 +480,12 @@ async def clips(ctx):
 
 @client.command()
 async def updateBot(ctx):
-  await ctx.send("Bot updated to 1.5.5.4!")
-
-@client.command()
-async def vcHelp(ctx):
-  await ctx.send("```\nThis bot can play audio from a link! Use these commands:\n$play url - Plays audio from the url\n$skipto url - Skips current song and plays audio from the url\n$stop - Stops music```")
+  await ctx.send("Bot updated to 1.6!")
 
 @client.command()
 async def changelog(ctx):
-  await ctx.send("1.5.5.4: edited $help, code for 1.6 begun")
+  await ctx.send("1.6: created $doge (posts an img of doge, can be rare), updated $help, mentally preparing for the vc commands rewrite")
 
-@client.command()
-async def tttHelp(ctx):
-  await ctx.send("```This bot allows two different players to play tic tac toe over Discord! Use these commands:\n$tictactoe @player1 @player2 - Creates a tic tac toe game between two pinged players\n$place number  - Places an X or O on a tile (must be in a game and number must be between 1 and 9)\n$endgame - Ends the current game\nIt's currently not available to play with the bot\nThe turn order is determined randomly.```")
-  
 @client.command()
 async def useless(ctx, amount=1):
   await ctx.channel.purge(limit=amount)
@@ -607,6 +599,10 @@ async def stop(ctx):
     await channel.connect()
 # stops song by leaving and rejoining 
 # play audio commands
+
+@client.command()
+async def vcHelp(ctx):
+  await ctx.send("```\nThis bot can play audio from a link! Use these commands:\n$play url - Plays audio from the url\n$skipto url - Skips current song and plays audio from the url\n$stop - Stops music```")
 
 # tic-tac-toe commands----------------------------------------------
 @client.command()
@@ -749,6 +745,10 @@ async def place_error(ctx, error):
      ctx.send("Please enter a number!")
 # error handler for tic tac toe command
 
+@client.command()
+async def tttHelp(ctx):
+  await ctx.send("```This bot allows two different players to play tic tac toe over Discord! Use these commands:\n$tictactoe @player1 @player2 - Creates a tic tac toe game between two pinged players\n$place number  - Places an X or O on a tile (must be in a game and number must be between 1 and 9)\n$endgame - Ends the current game\nIt's currently not available to play with the bot\nThe turn order is determined randomly.```")
+  
 # doge commands----------------------------------------------
 @client.command()
 async def doge(ctx):
@@ -812,18 +812,7 @@ client.run('ODAyMjU2ODY3Mjg4MDIzMDUx.YAsl7g.5Z6E_SyEnKzj-DHPBITA0FKYJ94')
 # 1.5.5.2: updated $tictactoe to prevent playing with the bot and breaking the game and some spelling errors, updated $tttHelp
 # 1.5.5.3: 1.5.5.3: created $sources, edited $help, disabled tictactoe countermeasures 2 and 3
 # 1.5.5.4: edited $help, code for 1.6 begun
-# 1.6: created $doge (posts an img of doge, can be rare), created $dogeHelp, updated $help NOT DEPOLYED
-
-#things to do:
-# https://chatbotslife.com/5-dumb-things-you-can-do-with-discord-bots-48cf6aa703de
-#   Doge, rng to determine rare doges
-# https://cdn.discordapp.com/attachments/854909605996920883/857731855959719966/5845e770fb0b0755fa99d7f4.png
-# https://cdn.discordapp.com/attachments/802258582950117430/857732080031760384/0HVTKtSGhO5lzZ7te5ZRtt1H-cOKK24VcBph0nMu5o38OV7Olr9b0r3KERJadmRrbkvUgAjs9sFnqmbxNexBR0e7iF4-JZqS8_Xj.png
-# https://cdn.discordapp.com/attachments/802258582950117430/857732280151703552/k5WRHNIjkJomYQXE5Y-X0H5wMe58lSUOD7E0n0DbwKYAnqS7GKbo28eWf38cOwvGEkcV4gxL4Ru6cDbYqUgCE1e5CAqLhPJ3m0NM.png
-# https://cdn.discordapp.com/attachments/802258582950117430/857732866637037628/5845e687fb0b0755fa99d7ee.png
-# https://cdn.discordapp.com/attachments/802258582950117430/857732965365579812/5845e643fb0b0755fa99d7ea.png
-# https://cdn.discordapp.com/attachments/802258582950117430/857733627222425620/3cqykx.png
-# https://cdn.discordapp.com/attachments/802258582950117430/857734252065980437/Doge-Head-Transparent-Background.png
+# 1.6: created $doge (posts an img of doge, can be rare), updated $help, mentally preparing for the vc commands rewrite
 
 #sources: 
 # discord.py discord
