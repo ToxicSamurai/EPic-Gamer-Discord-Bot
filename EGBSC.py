@@ -472,7 +472,7 @@ async def breakme(ctx):
 
 @client.command()
 async def help(ctx):
-  await ctx.send("```\nCommands:\n$stq - Sun Tzu Quotes\n$twitch - Twitch link\n$call - @ here\n$phys - Scientific papers link\n$navyseals - Navy Seals Copypasta\n$adam - Adam Wilson\n$vcroulette - Coming soon\n$rejoin/$rejoinbtp - Discord invite link\n$APIref - Documentation\n$join/leave - Lets the bot join/leave your current vc\n$vcHelp - Displays help for voice channel commands\n$tttHelp - Displays help for tic tac toe commands\n$alice - Pictures of Jacob's cat\n$clips - Clips channel link\n$lenny - Posts a random lenny face\n$sources - Links to sources I used to create this bot\nPrefixes:\nHurr/Durr - Hurrguy/Durrguy\nRed sus - red sus before\nWhen the imposter is sus - sus!\nI'm - Dad joke\nPog - WOO BABY\nP(a)edophile - Uno reverse\nYa\'ll - Corrects your ignorant mistake\nSussy - sussus amogus```")
+  await ctx.send("```\nCommands:\n$stq - Sun Tzu Quotes\n$twitch - Twitch link\n$call - @ here\n$phys - Scientific papers link\n$navyseals - Navy Seals Copypasta\n$adam - Adam Wilson\n$vcroulette - Coming soon\n$rejoin/$rejoinbtp - Discord invite link\n$APIref - Documentation\n$join/leave - Lets the bot join/leave your current vc\n$vcHelp - Displays help for voice channel commands\n$tttHelp - Displays help for tic tac toe commands\n$alice - Pictures of Jacob's cat\n$clips - Clips channel link\n$lenny - Posts a random lenny face\n$sources - Links to sources I used to create this bot\n$useless - This command is useless, do not use it.\nPrefixes:\nHurr/Durr - Hurrguy/Durrguy\nRed sus - red sus before\nWhen the imposter is sus - sus!\nI'm - Dad joke\nPog - WOO BABY\nP(a)edophile - Uno reverse\nYa\'ll - Corrects your ignorant mistake\nSussy - sussus amogus```")
 
 @client.command()
 async def clips(ctx):
@@ -480,7 +480,7 @@ async def clips(ctx):
 
 @client.command()
 async def updateBot(ctx):
-  await ctx.send("Bot updated to 1.5.5.3!")
+  await ctx.send("Bot updated to 1.5.5.4!")
 
 @client.command()
 async def vcHelp(ctx):
@@ -488,7 +488,7 @@ async def vcHelp(ctx):
 
 @client.command()
 async def changelog(ctx):
-  await ctx.send("1.5.5.3: created $sources, edited $help, disabled tictactoe countermeasures 2 and 3")
+  await ctx.send("1.5.5.4: edited $help, code for 1.6 begun")
 
 @client.command()
 async def tttHelp(ctx):
@@ -782,6 +782,7 @@ client.run('ODAyMjU2ODY3Mjg4MDIzMDUx.YAsl7g.5Z6E_SyEnKzj-DHPBITA0FKYJ94')
 # 1.5.5.1: updated $useless, created $lenny, created lenny dictionary, edited $help
 # 1.5.5.2: updated $tictactoe to prevent playing with the bot and breaking the game and some spelling errors, updated $tttHelp
 # 1.5.5.3: 1.5.5.3: created $sources, edited $help, disabled tictactoe countermeasures 2 and 3
+# 1.5.5.4: edited $help, code for 1.6 begun
 
 #sources: 
 # discord.py discord
