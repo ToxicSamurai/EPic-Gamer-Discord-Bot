@@ -19,6 +19,7 @@ players = {}
 
 player1 = ""
 player2 = ""
+playerBot = ""
 turn = ""
 gameOver = True
 # variables for tic-tac-toe
@@ -609,6 +610,7 @@ async def tictactoe(ctx, p1: discord.Member, p2: discord.Member):
   global count
   global player1
   global player2
+  global playerBot
   global turn
   global gameOver
 
@@ -623,6 +625,7 @@ async def tictactoe(ctx, p1: discord.Member, p2: discord.Member):
 
     player1 = p1
     player2 = p2
+    playerBot = pB
 
     line = ""
     for x in range(len(board)):
@@ -639,10 +642,10 @@ async def tictactoe(ctx, p1: discord.Member, p2: discord.Member):
     await ctx.send("Mention a different player other than yourself!")
     # prevents a player playing with themselves
     # 6/23/21: Worked the first time lmao, just needs some refining. I made this segment entirely myself and I'm proud as fuck
-  elif str(player1.id) == 802256867288023051:
+  elif str(player1.id) == (playerBot.id):
     gameOver = True
     await ctx.send("Mention a different player other than the bot!")
-  elif str(player2.id) == 802256867288023051:
+  elif str(player2.id) == str(playerBot.id):
     gameOver = True
     await ctx.send("Mention a different player other than the bot!")
   elif str(player1.id) != str(player2.id):
