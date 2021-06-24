@@ -166,6 +166,175 @@ aliceDict = [
   ]
 # dictionary for Jacob's cat photos
 
+lennyDict = [
+  (
+    '( ͡° ͜ʖ ͡°)'
+  ),
+  (
+    '¯\_(ツ)_/¯'
+  ),
+  (
+    '̿̿ ̿̿ ̿̿ ̿'̿'\̵͇̿̿\з= ( ▀ ͜͞ʖ▀) =ε/̵͇̿̿/’̿’̿ ̿ ̿̿ ̿̿ ̿̿'
+  ),
+  (
+    '▄︻̷̿┻̿═━一'
+  ),
+  (
+    '( ͡°( ͡° ͜ʖ( ͡° ͜ʖ ͡°)ʖ ͡°) ͡°)'
+  ),
+  (
+    'ʕ•ᴥ•ʔ'
+  ),
+  (
+    '(▀̿Ĺ̯▀̿ ̿)'
+  ),
+  (
+    '(ง ͠° ͟ل͜ ͡°)ง'
+  ),
+  (
+    '༼ つ ◕_◕ ༽つ'
+  ),
+  (
+    'ಠ_ಠ'
+  ),
+  (
+    '(づ｡◕‿‿◕｡)づ'
+  ),
+  (
+    ' ̿̿ ̿̿ ̿'̿'\̵͇̿̿\з=( ͠° ͟ʖ ͡°)=ε/̵͇̿̿/’̿’̿ ̿ ̿̿ ̿̿ ̿̿'
+  ),
+  (
+    '(ﾉ◕ヮ◕)ﾉ*:･ﾟ✧ ✧ﾟ･: *ヽ(◕ヮ◕ヽ)'
+  ),
+  (
+    '[̲̅$̲̅(̲̅5̲̅)̲̅$̲̅]'
+  ),
+  (
+    '┬┴┬┴┤ ͜ʖ ͡°) ├┬┴┬┴'
+  ),
+  (
+    '( ͡°╭͜ʖ╮͡° )'
+  ),
+  (
+    '(͡ ͡° ͜ つ ͡͡°)'
+  ),
+  (
+    '(• ε •)'
+  ),
+  (
+    '(ง'̀-'́)ง' 
+  ),
+  (
+    '(ಥ﹏ಥ)'
+  ),
+  (
+    '﴾͡๏̯͡๏﴿ O\'RLY?'
+  ),
+  (
+    '(ノಠ益ಠ)ノ彡┻━┻'
+  ),
+  (
+    '[̲̅$̲̅(̲̅ ͡° ͜ʖ ͡°̲̅)̲̅$̲̅]'
+  ),
+  (
+    '(ﾉ◕ヮ◕)ﾉ*:･ﾟ✧'
+  ),
+  (
+    '(☞ﾟ∀ﾟ)☞'
+  ),
+  (
+    '| (• ◡•)| (❍ᴥ❍ʋ)'
+  ),
+  (
+    '(◕‿◕✿)'
+  ),
+  (
+    '(ᵔᴥᵔ)'
+  ),
+  (
+    '(¬‿¬)'
+  ),
+  (
+    '(☞ﾟヮﾟ)☞ ☜(ﾟヮﾟ☜)'
+  ),
+  (
+    '(づ￣ ³￣)づ'
+  ),
+  (
+    'ლ(ಠ益ಠლ)'
+  ),
+  (
+    'ಠ╭╮ಠ'
+  ),
+  (
+    '̿ ̿ ̿'̿'\̵͇̿̿\з=(•_•)=ε/̵͇̿̿/'̿'̿ ̿'
+  ),
+  (
+    '/╲/\╭( ͡° ͡° ͜ʖ ͡° ͡°)╮/\╱\'
+  ),
+  (
+    '(;´༎ຶД༎ຶ`)'
+  ),
+  (
+    '♪~ ᕕ(ᐛ)ᕗ'
+  ),
+  (
+    '♥‿♥'
+  ),
+  (
+    '༼ つ  ͡° ͜ʖ ͡° ༽つ'
+  ),
+  (
+    '༼ つ ಥ_ಥ ༽つ'
+  ),
+  (
+    '(╯°□°）╯︵ ┻━┻'
+  ),
+  (
+    '( ͡ᵔ ͜ʖ ͡ᵔ )'
+  ),
+  (
+    'ヾ(⌐■_■)ノ♪'
+  ),
+  (
+    '~(˘▾˘~)'
+  ),
+  (
+    '◉_◉'
+  ),
+  (
+    '\ (•◡•) /'
+  ),
+  (
+    '(~˘▾˘)~'
+  ),
+  (
+    '(._.) ( l: ) ( .-. ) ( :l ) (._.)'
+  ),
+  (
+    '༼ʘ̚ل͜ʘ̚༽'
+  ),
+  (
+    '༼ ºل͟º ༼ ºل͟º ༼ ºل͟º ༽ ºل͟º ༽ ºل͟º ༽'
+  ),
+  (
+    '┬┴┬┴┤(･_├┬┴┬┴'
+  ),
+  (
+    'ᕙ(⇀‸↼‶)ᕗ'
+  ),
+  (
+    'ᕦ(ò_óˇ)ᕤ'
+  ),
+  (
+    '┻━┻ ︵ヽ(`Д´)ﾉ︵ ┻━┻'
+  ),
+  (
+    '⚆ _ ⚆'
+  ),
+]
+# dictionary for lenny faces
+
 @client.event
 async def on_ready():
     await client.change_presence(status=discord.Status.do_not_disturb, activity=discord.Game('1.5 released! Use $tttHelp'))
@@ -317,7 +486,7 @@ async def breakme(ctx):
 
 @client.command()
 async def help(ctx):
-  await ctx.send("```\nCommands:\n$stq - Sun Tzu Quotes\n$twitch - Twitch link\n$call - @ here\n$phys - Scientific papers link\n$navyseals - Navy Seals Copypasta\n$adam - Adam Wilson\n$vcroulette - Coming soon\n$rejoin/$rejoinbtp - Discord invite link\n$APIref - Documentation\n$join/leave - Lets the bot join/leave your current vc\n$vcHelp - Displays help for voice channel commands\n$tttHelp - Displays help for tic tac toe commands\n$alice - Pictures of Jacob's cat\n$clips - Link to Scarlett's clips channel\nPrefixes:\nHurr/Durr - Hurrguy/Durrguy\nRed sus - red sus before\nWhen the imposter is sus - sus!\nI'm - Dad joke\nPog - WOO BABY\nP(a)edophile - Uno reverse\nYa\'ll - Corrects your ignorant mistake\nSussy - sussus amogus```")
+  await ctx.send("```\nCommands:\n$stq - Sun Tzu Quotes\n$twitch - Twitch link\n$call - @ here\n$phys - Scientific papers link\n$navyseals - Navy Seals Copypasta\n$adam - Adam Wilson\n$vcroulette - Coming soon\n$rejoin/$rejoinbtp - Discord invite link\n$APIref - Documentation\n$join/leave - Lets the bot join/leave your current vc\n$vcHelp - Displays help for voice channel commands\n$tttHelp - Displays help for tic tac toe commands\n$alice - Pictures of Jacob's cat\n$clips - Link to Scarlett's clips channel\n$lenny - Posts a random lenny face\nPrefixes:\nHurr/Durr - Hurrguy/Durrguy\nRed sus - red sus before\nWhen the imposter is sus - sus!\nI'm - Dad joke\nPog - WOO BABY\nP(a)edophile - Uno reverse\nYa\'ll - Corrects your ignorant mistake\nSussy - sussus amogus```")
 
 @client.command()
 async def clips(ctx):
@@ -325,7 +494,7 @@ async def clips(ctx):
 
 @client.command()
 async def updateBot(ctx):
-  await ctx.send("Bot updated to 1.5.5!")
+  await ctx.send("Bot updated to 1.5.5.1!")
 
 @client.command()
 async def vcHelp(ctx):
@@ -333,7 +502,7 @@ async def vcHelp(ctx):
 
 @client.command()
 async def changelog(ctx):
-  await ctx.send("1.5.5: created $useless, edited $help")
+  await ctx.send("1.5.5.1: updated $useless, created $lenny, created lenny dictionary, edited $help")
 
 @client.command()
 async def tttHelp(ctx):
@@ -342,7 +511,12 @@ async def tttHelp(ctx):
 @client.command()
 async def useless(ctx, amount=1):
   await ctx.channel.purge(limit=amount)
-  await ctx.send("This command is useless, stop using it.", delete_after=5)
+  await ctx.send("This command is useless, stop using it.", delete_after=3)
+
+@client.command()
+async def lenny(ctx):
+  response = random.choice(lennyDict)
+  await ctx.send(response)
 
 # vc commands----------------------------------------------
 @client.command()
@@ -605,6 +779,7 @@ client.run('ODAyMjU2ODY3Mjg4MDIzMDUx.YAsl7g.5Z6E_SyEnKzj-DHPBITA0FKYJ94')
 # 1.5.3: edited $tictactoe so the one player countermeasure is determined before the player who starts is determined, updated $tttHelp
 # 1.5.4: edited $tictactoe to make 1.5.3 work, edited $tttHelp
 # 1.5.5: created $useless, edited $help
+# 1.5.5.1: updated $useless, created $lenny, created lenny dictionary, edited $help
 
 #sources: 
 # discord.py discord
