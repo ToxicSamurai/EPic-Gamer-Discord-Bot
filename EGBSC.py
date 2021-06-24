@@ -752,30 +752,32 @@ async def place_error(ctx, error):
 # doge commands----------------------------------------------
 async def doge(ctx):
   num = random.randint(1, 1000)
-  if num >= 1 and <= 1000 and != 10 and != 20 and != 30 and != 40 and != 110 and != 120 and != 130 and != 140 and != 210 and != 220 and != 230 and != 240 and != 310 and != 320 and !=330 and != 333 and != 340 and !=410 and != 420 and != 430 and != 440 and != 510 and != 520 and != 530 and !=540 and != 610 and != 620 and !=630 and != 640 and != 666 and != 710 and != 720 and != 730 and != 740 and != 810 and != 820 and != 830 and != 840 and != 910 and != 920 and != 930 and != 940:
+  if num >= 1 or <= 1000:
     await ctx.send(Common doge!)
     await ctx.send("https://cdn.discordapp.com/attachments/802258582950117430/857745875555975178/5845e770fb0b0755fa99d7f4.png")
   # normal doge command
   elif num == 10 or num == 110 or num == 210 or num == 310 or num == 410 or num == 510 or num == 610 or num == 710 or num == 810 or num == 910:
-    await ctx.send("Rare angry doge! **1/100 chance!**")
+    await ctx.send("You also found a rare angry doge! **1/100 chance!**")
     await ctx.send("https://cdn.discordapp.com/attachments/802258582950117430/857732280151703552/k5WRHNIjkJomYQXE5Y-X0H5wMe58lSUOD7E0n0DbwKYAnqS7GKbo28eWf38cOwvGEkcV4gxL4Ru6cDbYqUgCE1e5CAqLhPJ3m0NM.png")
   elif num == 20 or num == 120 or num == 220 or num == 320 or num == 420 or num == 520 or num == 620 or num == 720 or num == 820 or num == 920:
-    await ctx.send("Rare femboy doge! **1/100 chance!**")
+    await ctx.send("You also found a rare femboy doge! **1/100 chance!**")
     await ctx.send("https://cdn.discordapp.com/attachments/802258582950117430/857734252065980437/Doge-Head-Transparent-Background.png")
   elif num == 30 or num == 130 or num == 230 or num == 330 or num == 430 or num == 530 or num == 630 or num == 730 or num == 830 or num == 930:
-    await ctx.send("Rare chubby doge! **1/100 chance!**")
+    await ctx.send("You also found a rare chubby doge! **1/100 chance!**")
     await ctx.send("https://cdn.discordapp.com/attachments/802258582950117430/857732080031760384/0HVTKtSGhO5lzZ7te5ZRtt1H-cOKK24VcBph0nMu5o38OV7Olr9b0r3KERJadmRrbkvUgAjs9sFnqmbxNexBR0e7iF4-JZqS8_Xj.png")
   elif num == 40 or num == 140 or num == 240 or num == 340 or num == 440 or num == 540 or num == 640 or num == 740 or num == 840 or num == 940:
-    await ctx.send("Rare chad doge! **1/100 chance!**")
+    await ctx.send("You also found a rare chad doge! **1/100 chance!**")
     await ctx.send("https://cdn.discordapp.com/attachments/802258582950117430/857733627222425620/3cqykx.png")
   # rare doge commands
   elif num == 333:
-    await ctx.send("Rare edible doge! **1/1000 chance!**")
+    await ctx.send("You also found an ultra rare edible doge! **1/1000 chance!**")
     await ctx.send("https://cdn.discordapp.com/attachments/802258582950117430/857732866637037628/5845e687fb0b0755fa99d7ee.png")
   elif num == 666:
-    await ctx.send("Rare ghost doge! **1/1000 chance!**")
+    await ctx.send("You also found an ultra rare ghost doge! **1/1000 chance!**")
     await ctx.send("https://cdn.discordapp.com/attachments/802258582950117430/857732965365579812/5845e643fb0b0755fa99d7ea.png")
   # ultra rare doge commands
+  # unused:  and != 10 and != 20 and != 30 and != 40 and != 110 and != 120 and != 130 and != 140 and != 210 and != 220 and != 230 and != 240 and != 310 and != 320 and !=330 and != 333 and != 340 and !=410 and != 420 and != 430 and != 440 and != 510 and != 520 and != 530 and !=540 and != 610 and != 620 and !=630 and != 640 and != 666 and != 710 and != 720 and != 730 and != 740 and != 810 and != 820 and != 830 and != 840 and != 910 and != 920 and != 930 and != 940:
+
 
 client.run('ODAyMjU2ODY3Mjg4MDIzMDUx.YAsl7g.5Z6E_SyEnKzj-DHPBITA0FKYJ94')
 
