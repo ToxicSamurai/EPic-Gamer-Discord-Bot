@@ -19,7 +19,7 @@ players = {}
 
 player1 = ""
 player2 = ""
-playerBot = ""
+playerBot = 802256867288023051
 turn = ""
 gameOver = True
 # variables for tic-tac-toe
@@ -610,7 +610,7 @@ async def tictactoe(ctx, p1: discord.Member, p2: discord.Member):
   global count
   global player1
   global player2
-  global playerBot
+  global playerBot 
   global turn
   global gameOver
 
@@ -625,7 +625,6 @@ async def tictactoe(ctx, p1: discord.Member, p2: discord.Member):
 
     player1 = p1
     player2 = p2
-    playerBot = pB
 
     line = ""
     for x in range(len(board)):
@@ -668,6 +667,7 @@ async def place(ctx, pos : int):
   global turn
   global player1
   global player2
+  global playerBot
   global board
   global count
 
