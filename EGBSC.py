@@ -639,10 +639,10 @@ async def tictactoe(ctx, p1: discord.Member, p2: discord.Member):
     await ctx.send("Mention a different player other than yourself!")
     # prevents a player playing with themselves
     # 6/23/21: Worked the first time lmao, just needs some refining. I made this segment entirely myself and I'm proud as fuck
-  elif str(player1.id) == 802256867288023051
+  elif str(player1.id) == 802256867288023051:
     gameOver = True
     await ctx.send("Mention a different player other than the bot!")
-  elif str(player2.id) == 802256867288023051
+  elif str(player2.id) == 802256867288023051:
     gameOver = True
     await ctx.send("Mention a different player other than the bot!")
   elif str(player1.id) != str(player2.id):
