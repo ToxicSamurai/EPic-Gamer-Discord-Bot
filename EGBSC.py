@@ -792,6 +792,7 @@ async def beg(ctx):
 
   await ctx.send(f"Someone gave you {earnings} coins!")
 
+  wallet_amt = users[str(user.id)]["wallet"]
   wallet_amt = users[str(user.id)]["wallet"] += earnings
 
   with open("economybank.json", "w") as f:
