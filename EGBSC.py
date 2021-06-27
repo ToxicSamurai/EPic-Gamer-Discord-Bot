@@ -3,6 +3,7 @@ import random
 import youtube_dl
 import asyncio
 import os
+import json
 from youtube_dl import YoutubeDL
 from discord.ext import commands
 from discord.utils import get
@@ -13,6 +14,8 @@ client = commands.Bot(command_prefix = '$')
 # creates an instance of `bot`
 client.remove_command('help')
 # removes the default help command
+os.chdir("C:\\Users\\aliso\\Desktop\\Discord Bot save repo")
+# gives access to other files in the repo dir
 
 players = {}
 # sets music player ids
@@ -778,6 +781,57 @@ async def doge(ctx):
     await ctx.send("https://cdn.discordapp.com/attachments/802258582950117430/857732965365579812/5845e643fb0b0755fa99d7ea.png")
   # ultra rare doge commands
 
+# economy commands----------------------------------------------
+@client.command()
+async def beg(ctx):
+  await open_account(ctx.author)
+  user = ctx.author
+  users = await get_bank_data()
+  
+  earnings = random.randrange(101)
+
+  await ctx.send(f"Someone gave you {earnings} coins!")
+
+  wallet_amt = users[str(user.id)]["wallet"] += earnings
+
+  with open("economybank.json", "w") as f:
+    json.dump(users, f)
+
+@client.command()
+async def balance(ctx):
+  await open_account(ctx.author)
+  user = ctx.author
+  users = await get_bank_data()
+
+  wallet_amt = users[str(user.id)]["wallet"]
+  bank_amt = users[str(user.id)]["bank"]
+
+  em = discord.Embed(title = f"{ctx.author.name}'s balance", color = discord.Color.red())
+  em.add_field(name = "Wallet balance", value = wallet_amt)
+  em.add_field(name = "Bank balance", value = bank_amt)
+  await ctx.send(embed = em)
+
+async def open_account(user):
+  users = await get_bank_data()
+
+  if str(user.id) in users:
+    return False
+  else:
+    users[str(user.id)] = {}
+    users[str(user.id)]["wallet"] = 0
+    users[str(user.id)]["bnak"] = 0
+
+  with open("economybank.json", "w") as f:
+    json.dump(users, f)
+  return False
+# hyperfunction for $balance
+
+async def get_bank_data():
+  with open("economybank.json", "r") as f:
+    # opens econonomybank.json file as f
+    users = json.load(f)
+  return users
+# hyperfunction for open_account
 client.run('ODAyMjU2ODY3Mjg4MDIzMDUx.YAsl7g.5Z6E_SyEnKzj-DHPBITA0FKYJ94')
 
 #steps to push to Heroku
@@ -792,7 +846,7 @@ client.run('ODAyMjU2ODY3Mjg4MDIzMDUx.YAsl7g.5Z6E_SyEnKzj-DHPBITA0FKYJ94')
 #steps to create a new requirements.txt
 # Go to save repo
 # Type cmd into location bar
-#"pip freeze > requirements.txt"
+# "pip freeze > requirements.txt"
 
 #changelog
 # updated $updateBot and $changelog should be assumed
@@ -831,3 +885,5 @@ client.run('ODAyMjU2ODY3Mjg4MDIzMDUx.YAsl7g.5Z6E_SyEnKzj-DHPBITA0FKYJ94')
   #https://www.youtube.com/watch?v=ml-5tXRmmFk
   #https://www.youtube.com/watch?v=wBbgCUQZNzM
 #https://stackoverflow.com/questions/22786068/how-to-avoid-http-error-429-too-many-requests-python
+#https://www.youtube.com/channel/UC2ITRZ4_Di-KMHSIylTQbBA
+  #https://www.youtube.com/watch?v=HPaadO_sRD4
