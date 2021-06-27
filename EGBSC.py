@@ -409,11 +409,11 @@ async def on_message(message):
   if message.content.startswith("ya\'ll"):
     await message.channel.send("Remember kids, it\'s y\'all! Ya\'ll is the sign of the devil!")
 
-  #if message.content.startswith("!$!Ascension"):
-    #async def addrole(ctx):
-      #user = ctx.message.author
-      #role = discord.utils.get(user.server.roles, name="Test")
-      #await client.add_roles(user, role)
+  if message.content.startswith("korea"):
+    await message.channel.send("Korea? I love Korea! Korea is the greatest country on Earth and has no downsides whatsoever! Annyeong hasao nan Maya! NO! I AM NOT A KOREABOO! I'm basically just a Korean born in the wrong country :pensive: Saranghae Bangtan Sonyaedon!! Do you want to go to Korea? I'm going to school in Korea!")
+
+  if message.content.startswith("Korea"):
+    await message.channel.send("Korea? I love Korea! Korea is the greatest country on Earth and has no downsides whatsoever! Annyeong hasao nan Maya! NO! I AM NOT A KOREABOO! I'm basically just a Korean born in the wrong country :pensive: Saranghae Bangtan Sonyaedon!! Do you want to go to Korea? I'm going to school in Korea!")
   await client.process_commands(message)
 
 @client.command()
