@@ -3,7 +3,6 @@ import random
 import youtube_dl
 import asyncio
 import os
-import json
 from youtube_dl import YoutubeDL
 from discord.ext import commands
 from discord.utils import get
@@ -14,8 +13,6 @@ client = commands.Bot(command_prefix = '$')
 # creates an instance of `bot`
 client.remove_command('help')
 # removes the default help command
-os.chdir("C:\\Users\\aliso\\Desktop\\Discord Bot save repo")
-# gives access to other files in the repo dir
 
 players = {}
 # sets music player ids
