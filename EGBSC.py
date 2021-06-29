@@ -783,7 +783,7 @@ async def doge(ctx):
 # database commands----------------------------------------------
 @client.command()
 async def pingTest(ctx):
-  mongo_url = "mongodb+srv://ToxicSamurai:nQdQURG6PXm6Qyx@epicgamerbotdb.qqcgu.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+  mongo_url = "mongodb+srv://ToxicSamurai:nQdQURG6PXm6Qyx@epicgamerbotdb.qqcgu.mongodb.net/EpicGamerBotDB?retryWrites=true&w=majority"
   cluster = MongoClient(mongo_url)
   db = cluster["EpicGamerBotDB"]
   collection = db["EconomyBank"]
