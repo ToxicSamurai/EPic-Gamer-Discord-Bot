@@ -3,12 +3,18 @@ import random
 import youtube_dl
 import asyncio
 import os
+import pymongo
+from pymongo import MongoClient
 from youtube_dl import YoutubeDL
 from discord.ext import commands
 from discord.utils import get
 from discord import FFmpegPCMAudio
 # imports library resources
 
+cluster = MongoClient("mongodb+srv://ToxicSamurai:nQdQURG6PXm6Qyx@epicgamerbotdb.qqcgu.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
+db = cluster["EpicGamerBotDB"]
+collection = db["EconomyBank"]
+# initilizes MongoDB
 client = commands.Bot(command_prefix = '$')
 # creates an instance of `bot`
 client.remove_command('help')
@@ -777,6 +783,10 @@ async def doge(ctx):
     await ctx.send("Rare ghost doge! **1/1000 chance!**")
     await ctx.send("https://cdn.discordapp.com/attachments/802258582950117430/857732965365579812/5845e643fb0b0755fa99d7ea.png")
   # ultra rare doge commands
+
+# database commands----------------------------------------------
+post = {"_id": 0, "name": "test", "score": 5}
+collection.insert_one(post)
 
 client.run('ODAyMjU2ODY3Mjg4MDIzMDUx.YAsl7g.5Z6E_SyEnKzj-DHPBITA0FKYJ94')
 
