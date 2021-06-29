@@ -781,13 +781,13 @@ async def doge(ctx):
   # ultra rare doge commands
 
 # database commands----------------------------------------------
-cluster = MongoClient("mongodb+srv://ToxicSamurai:nQdQURG6PXm6Qyx@epicgamerbotdb.qqcgu.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
-db = cluster["EpicGamerBotDB"]
-collection = db["EconomyBank"]
+#cluster = MongoClient("mongodb+srv://ToxicSamurai:nQdQURG6PXm6Qyx@epicgamerbotdb.qqcgu.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
+#db = cluster["EpicGamerBotDB"]
+#collection = db["EconomyBank"]
 # initilizes MongoDB
 
-post = {"_id": 0, "name": "ToxicSamurai", "score": 5}
-collection.insert_one(post)
+#post = {"_id": 0, "name": "ToxicSamurai", "score": 5}
+#collection.insert_one(post)
 
 client.run('ODAyMjU2ODY3Mjg4MDIzMDUx.YAsl7g.5Z6E_SyEnKzj-DHPBITA0FKYJ94')
 
