@@ -5,6 +5,7 @@ certifi==2021.5.30
 cffi==1.14.5
 chardet==4.0.0
 discord.py==1.7.3
+dnspython==2.1.0
 idna==2.10
 multidict==5.1.0
 pycparser==2.20

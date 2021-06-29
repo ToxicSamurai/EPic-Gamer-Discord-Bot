@@ -804,6 +804,12 @@ client.run('ODAyMjU2ODY3Mjg4MDIzMDUx.YAsl7g.5Z6E_SyEnKzj-DHPBITA0FKYJ94')
 # Type cmd into location bar
 # "pip freeze > requirements.txt"
 
+#steps to clear build cache
+# Go to save repo
+# Type cmd into location bar
+# "heroku builds:cache:purge -a epic-gamer-music-bot"
+# "epic-gamer-music-bot"
+
 #changelog
 # updated $updateBot and $changelog should be assumed
 # retroactive 1.0: stq update, 1.1, prefix update, 1.2 command update, 1.3 vc update, 1.4 alice update
