@@ -337,18 +337,18 @@ async def on_message(message):
     # prevents the bot from responding to itself
     return
 
-  if message.content.startswith('I\'m'):
+  if message.content.startswith('I\'m '):
     # runs the command if the message starts with I'm
     await message.channel.send(f"Hi {' '.join(message.content.split()[1:])}, I\'m dad!")
     # sends message in same channel with the message content of the command message
       
-  if message.content.startswith('i\'m'):
+  if message.content.startswith('i\'m '):
     await message.channel.send(f"Hi {' '.join(message.content.split()[1:])}, I\'m dad!")
       
-  if message.content.startswith('Im'):
+  if message.content.startswith('Im '):
     await message.channel.send(f"Hi {' '.join(message.content.split()[1:])}, I\'m dad!")
       
-  if message.content.startswith('im'):
+  if message.content.startswith('im '):
     await message.channel.send(f"Hi {' '.join(message.content.split()[1:])}, I\'m dad!")
 
   if message.content.startswith('durr'):
