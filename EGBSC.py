@@ -469,7 +469,7 @@ async def apiref(ctx):
   await ctx.send("https://discordpy.readthedocs.io/en/stable/api.html")
 
 @client.command()
-async def breakme(ctx):
+def breakme(ctx):
   await ctx.send("$breakme")
 
 @client.command()
