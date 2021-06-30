@@ -469,10 +469,6 @@ async def apiref(ctx):
   await ctx.send("https://discordpy.readthedocs.io/en/stable/api.html")
 
 @client.command()
-def breakme(ctx):
-  await ctx.send("$breakme")
-
-@client.command()
 async def help(ctx):
   await ctx.send("```\nCommands:\n$stq - Sun Tzu Quotes\n$twitch - Twitch link\n$call - @ here\n$phys - Scientific papers link\n$navyseals - Navy Seals Copypasta\n$adam - Adam Wilson\n$vcroulette - Coming soon\n$rejoin/$rejoinbtp - Discord invite link\n$APIref - Documentation\n$join/leave - Lets the bot join/leave your current vc\n$vcHelp - Displays help for voice channel commands\n$tttHelp - Displays help for tic tac toe commands\n$alice - Pictures of Jacob's cat\n$clips - Clips channel link\n$lenny - Posts a random lenny face\n$sources - Links to sources I used to create this bot\n$useless - This command is useless, do not use it.\n$doge - Posts a doge, however there's a chance for a rare or ultra rare doge\nPrefixes:\nHurr/Durr - Hurrguy/Durrguy\nRed sus - red sus before\nWhen the imposter is sus - sus!\nI'm - Dad joke\nPog - WOO BABY\nP(a)edophile - Uno reverse\nYa\'ll - Corrects your ignorant mistake\nSussy - sussus amogus\nKorea - Korea spam```")
 
@@ -482,11 +478,11 @@ async def clips(ctx):
 
 @client.command()
 async def updateBot(ctx):
-  await ctx.send("Bot updated to 1.6.2!")
+  await ctx.send("Bot updated to 1.6.3!")
 
 @client.command()
 async def changelog(ctx):
-  await ctx.send("1.6.2: edited on_message.im/Im/i\'m/I\'m to prevent responding to words that begin with im-")
+  await ctx.send("1.6.3: removed $breakMe")
 
 @client.command()
 async def useless(ctx, amount=1):
@@ -837,6 +833,7 @@ client.run('ODAyMjU2ODY3Mjg4MDIzMDUx.YAsl7g.5Z6E_SyEnKzj-DHPBITA0FKYJ94')
 # 1.6: created $doge (posts an img of doge, can be rare), updated $help, mentally preparing for the vc commands rewrite
 # 1.6.1: created korea as a prefix, edited $help
 # 1.6.2: edited on_message.im/Im/i\'m/I\'m to prevent responding to words that begin with im-
+# 1.6.3: removed $breakMe
 
 #sources: 
 # discord.py discord
