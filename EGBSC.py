@@ -482,11 +482,11 @@ async def clips(ctx):
 
 @client.command()
 async def updateBot(ctx):
-  await ctx.send("Bot updated to 1.6.1!")
+  await ctx.send("Bot updated to 1.6.2!")
 
 @client.command()
 async def changelog(ctx):
-  await ctx.send("1.6.1: created korea as a prefix, edited $help")
+  await ctx.send("1.6.2: edited on_message.im/Im/i\'m/I\'m to prevent responding to words that begin with im-")
 
 @client.command()
 async def useless(ctx, amount=1):
@@ -836,6 +836,7 @@ client.run('ODAyMjU2ODY3Mjg4MDIzMDUx.YAsl7g.5Z6E_SyEnKzj-DHPBITA0FKYJ94')
 # 1.5.5.4: edited $help, code for 1.6 begun
 # 1.6: created $doge (posts an img of doge, can be rare), updated $help, mentally preparing for the vc commands rewrite
 # 1.6.1: created korea as a prefix, edited $help
+# 1.6.2: edited on_message.im/Im/i\'m/I\'m to prevent responding to words that begin with im-
 
 #sources: 
 # discord.py discord
