@@ -504,7 +504,7 @@ async def report(ctx):
 
 @client.command(pass_context = True)
 async def dmTest(ctx, member : discord.Member, *, content: str):
-  await bot.send_message(member, content)
+  await client.send_message(member, content)
 
 # vc commands----------------------------------------------
 @client.command()
