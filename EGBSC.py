@@ -502,7 +502,7 @@ async def sources(ctx):
 async def report(ctx):
   await ctx.send("https://dis.gd/report")
 
-@bot.command(pass_context = True)
+@client.command(pass_context = True)
 async def dmTest(ctx, member : discord.Member, *, content: str):
   await bot.send_message(member, content)
 
