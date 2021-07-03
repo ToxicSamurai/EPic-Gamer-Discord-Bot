@@ -470,7 +470,7 @@ async def apiref(ctx):
 
 @client.command()
 async def help(ctx):
-  await ctx.send("```\nCommands:\n$stq - Sun Tzu Quotes\n$twitch - Twitch link\n$call - @ here\n$phys - Scientific papers link\n$navyseals - Navy Seals Copypasta\n$adam - Adam Wilson\n$vcroulette - Coming soon\n$rejoin/$rejoinbtp - Discord invite link\n$APIref - Documentation\n$join/leave - Lets the bot join/leave your current vc\n$vcHelp - Displays help for voice channel commands\n$tttHelp - Displays help for tic tac toe commands\n$alice - Pictures of Jacob's cat\n$clips - Clips channel link\n$lenny - Posts a random lenny face\n$sources - Links to sources I used to create this bot\n$useless - This command is useless, do not use it.\n$doge - Posts a doge, however there's a chance for a rare or ultra rare doge\nPrefixes:\nHurr/Durr - Hurrguy/Durrguy\nRed sus - red sus before\nWhen the imposter is sus - sus!\nI'm - Dad joke\nPog - WOO BABY\nP(a)edophile - Uno reverse\nYa\'ll - Corrects your ignorant mistake\nSussy - sussus amogus\nKorea - Korea spam```")
+  await ctx.send("```\nCommands:\n$stq - Sun Tzu Quotes\n$twitch - Twitch link\n$call - @ here\n$phys - Scientific papers link\n$navyseals - Navy Seals Copypasta\n$adam - Adam Wilson\n$vcroulette - Coming soon\n$rejoin/$rejoinbtp - Discord invite link\n$APIref - Documentation\n$join/leave - Lets the bot join/leave your current vc\n$vcHelp - Displays help for voice channel commands\n$tttHelp - Displays help for tic tac toe commands\n$alice - Pictures of Jacob's cat\n$clips - Clips channel link\n$lenny - Posts a random lenny face\n$sources - Links to sources I used to create this bot\n$useless - This command is useless, do not use it.\n$doge - Posts a doge, however there's a chance for a rare or ultra rare doge\n$report - Discord report link\nPrefixes:\nHurr/Durr - Hurrguy/Durrguy\nRed sus - red sus before\nWhen the imposter is sus - sus!\nI'm - Dad joke\nPog - WOO BABY\nP(a)edophile - Uno reverse\nYa\'ll - Corrects your ignorant mistake\nSussy - sussus amogus\nKorea - Korea spam```")
 
 @client.command()
 async def clips(ctx):
@@ -478,11 +478,11 @@ async def clips(ctx):
 
 @client.command()
 async def updateBot(ctx):
-  await ctx.send("Bot updated to 1.6.4!")
+  await ctx.send("Bot updated to 1.6.5!")
 
 @client.command()
 async def changelog(ctx):
-  await ctx.send("1.6.4: created $report")
+  await ctx.send("1.6.5: created $dmTest, updated $help")
 
 @client.command()
 async def useless(ctx, amount=1):
@@ -501,6 +501,10 @@ async def sources(ctx):
 @client.command()
 async def report(ctx):
   await ctx.send("https://dis.gd/report")
+
+@bot.command(pass_context = True)
+async def dmTest(ctx, member : discord.Member, *, content: str):
+  await bot.send_message(member, content)
 
 # vc commands----------------------------------------------
 @client.command()
@@ -839,6 +843,7 @@ client.run('ODAyMjU2ODY3Mjg4MDIzMDUx.YAsl7g.5Z6E_SyEnKzj-DHPBITA0FKYJ94')
 # 1.6.2: edited on_message.im/Im/i\'m/I\'m to prevent responding to words that begin with im-
 # 1.6.3: removed $breakMe
 # 1.6.4: created $report
+# 1.6.5: created $dmTest, updated $help
 
 #sources: 
 # discord.py discord
