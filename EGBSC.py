@@ -502,7 +502,7 @@ async def sources(ctx):
 async def report(ctx):
   await ctx.send("https://dis.gd/report")
 
-@client.command(pass_context = True)
+@client.command()
 async def pm(ctx):
   user_id_list = [253668275496419329] # Replace this with list of IDs
   for user_id in user_id_list:
