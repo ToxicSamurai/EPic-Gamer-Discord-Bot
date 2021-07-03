@@ -504,9 +504,9 @@ async def report(ctx):
 
 @client.command()
 async def pm(ctx):
-  user_id_list = [253668275496419329] # Replace this with list of IDs
+  user_id_list = [253668275496419329]
   for user_id in user_id_list:
-    user = await bot.get_user_info(user_id)
+    user = await client.get_user_info(user_id)
     await user.send('hello')
 
 # vc commands----------------------------------------------
