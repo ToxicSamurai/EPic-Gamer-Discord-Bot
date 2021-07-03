@@ -502,13 +502,6 @@ async def sources(ctx):
 async def report(ctx):
   await ctx.send("https://dis.gd/report")
 
-@client.command()
-async def pm(ctx):
-  user_id_list = [253668275496419329]
-  for user_id in user_id_list:
-    user = await client.get_user_info(user_id)
-    await user.send('hello')
-
 # vc commands----------------------------------------------
 @client.command()
 async def join(ctx):
