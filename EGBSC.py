@@ -478,11 +478,11 @@ async def clips(ctx):
 
 @client.command()
 async def updateBot(ctx):
-  await ctx.send("Bot updated to 1.6.3!")
+  await ctx.send("Bot updated to 1.6.4!")
 
 @client.command()
 async def changelog(ctx):
-  await ctx.send("1.6.3: removed $breakMe")
+  await ctx.send("1.6.4: created $report")
 
 @client.command()
 async def useless(ctx, amount=1):
@@ -497,6 +497,10 @@ async def lenny(ctx):
 @client.command()
 async def sources(ctx):
   await ctx.send('Bot sources:\ndiscord.py discord\nhttps://discordpy.readthedocs.io/en/stable/api.html\nhttps://stackoverflow.com/questions/65891543/how-would-i-respond-to-a-message-with-what-the-user-said\nhttps://github.com/discordjs/discord.js/issues/439\nhttps://realpython.com/how-to-make-a-discord-bot-python/\nhttps://stackoverflow.com/questions/49076798/discord-py-add-role-to-someone\nhttps://stackoverflow.com/questions/49286640/how-to-set-bots-status\nhttps://stackoverflow.com/questions/63493179/nameerror-name-bot-is-not-defined\nhttps://www.youtube.com/channel/UCR-zOCvDCayyYy1flR5qaAg\nhttps://www.youtube.com/watch?v=K5pkOrjeAIs\nhttps://www.youtube.com/channel/UCwBjRPUuOefh6iFvG6zLhrg\nhttps://www.youtube.com/watch?v=pL2EuhSV7tw\nhttps://www.youtube.com/channel/UCdNnHNkhaRYr-3nhQqY7_dw\nhttps://www.youtube.com/watch?v=ml-5tXRmmFk\nhttps://www.youtube.com/watch?v=wBbgCUQZNzM\nhttps://stackoverflow.com/questions/22786068/how-to-avoid-http-error-429-too-many-requests-python')
+
+@client.command()
+async def report(ctx):
+  await ctx.send("https://dis.gd/report")
 
 # vc commands----------------------------------------------
 @client.command()
@@ -834,6 +838,7 @@ client.run('ODAyMjU2ODY3Mjg4MDIzMDUx.YAsl7g.5Z6E_SyEnKzj-DHPBITA0FKYJ94')
 # 1.6.1: created korea as a prefix, edited $help
 # 1.6.2: edited on_message.im/Im/i\'m/I\'m to prevent responding to words that begin with im-
 # 1.6.3: removed $breakMe
+# 1.6.4: created $report
 
 #sources: 
 # discord.py discord
