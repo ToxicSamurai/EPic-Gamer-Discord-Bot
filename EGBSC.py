@@ -503,16 +503,11 @@ async def report(ctx):
   await ctx.send("https://dis.gd/report")
 
 @client.command(pass_context = True)
-async def dmTest(self, ctx, user : discord.Member = None, *, message=None):
-  if use is None:
-    await ctx.send("Mention a user!")
-  if user is not None:
-    if message is None:
-      await ctx.send("Have body text!")
-    if message is not None:
-      myembed = discord.Embed()
-      myembed.add_field(name=f"{ctx.author} whispered:" value=f"{message}")
-      await user.send(embed=myembed)
+async def pm(ctx):
+  user_id_list = [253668275496419329] # Replace this with list of IDs
+  for user_id in user_id_list:
+    user = await bot.get_user_info(user_id)
+    await user.send('hello')
 
 # vc commands----------------------------------------------
 @client.command()
