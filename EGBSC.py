@@ -503,8 +503,16 @@ async def report(ctx):
   await ctx.send("https://dis.gd/report")
 
 @client.command(pass_context = True)
-async def dmTest(ctx, member : discord.Member, *, content: str):
-  await client.send_message(member, content)
+async def dmTest(self, ctx, user : discord.Member = None, *, message=None):
+  if use is None:
+    await ctx.send("Mention a user!")
+  if user is not None:
+    if message is None:
+      await ctx.send("Have body text!")
+    if message is not None:
+      myembed = discord.Embed()
+      myembed.add_field(name=f"{ctx.author} whispered:" value=f"{message}")
+      await user.send(embed=myembed)
 
 # vc commands----------------------------------------------
 @client.command()
