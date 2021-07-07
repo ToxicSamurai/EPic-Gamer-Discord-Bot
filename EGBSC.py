@@ -504,11 +504,11 @@ async def report(ctx):
 
 
 @client.command()
-async def rng(ctx, inputNum : str):
+async def rng(ctx, inputNum : int):
   num = random.randint(1, inputNum)
   await ctx.send(f"{num}")
   if isinstance(error, commands.MissingRequiredArgument):
-    await ctx.send("Put a number!")
+    await ctx.send("Please a number!")
 
 # vc commands----------------------------------------------
 @client.command()
