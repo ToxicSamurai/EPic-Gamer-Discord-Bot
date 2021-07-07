@@ -478,11 +478,11 @@ async def clips(ctx):
 
 @client.command()
 async def updateBot(ctx):
-  await ctx.send("Bot updated to 1.6.7!")
+  await ctx.send("Bot updated to 1.6.8!")
 
 @client.command()
 async def changelog(ctx):
-  await ctx.send("1.6.7: created error handler for $rng (rngErrorHandler)")
+  await ctx.send("1.6.8: fixed and edited error handler for $rng (@rng.error - rng_error)")
 
 @client.command()
 async def useless(ctx, amount=1):
@@ -507,8 +507,8 @@ async def rng(ctx, inputNum : int):
   num = random.randint(1, inputNum)
   await ctx.send(f"{num}")
 
-@rng.error()
-async def rngErrorHandler(ctx, error):
+@rng.error
+async def rng_error(ctx, error):
   if isinstance(error, commands.MissingRequiredArgument):
     await ctx.send("Please a number!")
 
@@ -852,7 +852,7 @@ client.run('ODAyMjU2ODY3Mjg4MDIzMDUx.YAsl7g.5Z6E_SyEnKzj-DHPBITA0FKYJ94')
 # 1.6.5: created $dmTest, updated $help
 # 1.6.6: created $rng, updated $help
 # 1.6.7: created error handler for $rng (@rng.error() - rngErrorHandler)
-# 1.6.8: fixed error handler for $rng (@rng.error() - rngErrorHandler)
+# 1.6.8: fixed and edited error handler for $rng (@rng.error - rng_error)
 #sources: 
 # discord.py discord
 # https://discordpy.readthedocs.io/en/stable/api.html
