@@ -799,8 +799,8 @@ async def suggest(ctx, suggestion : str):
   await user.send(f"{suggestion}")
   ctx.send("Thanks for the suggestion!")
 
-@suggest.error()
-async def 
+#@suggest.error()
+#async def 
 
 # database commands----------------------------------------------
 @client.command()
