@@ -507,7 +507,7 @@ async def rng(ctx, inputNum : int):
   num = random.randint(1, inputNum)
   await ctx.send(f"{num}")
 
-@client.command()
+@rng.error()
 async def rngErrorHandler(ctx, error):
   if isinstance(error, commands.MissingRequiredArgument):
     await ctx.send("Please a number!")
@@ -851,8 +851,8 @@ client.run('ODAyMjU2ODY3Mjg4MDIzMDUx.YAsl7g.5Z6E_SyEnKzj-DHPBITA0FKYJ94')
 # 1.6.4: created $report
 # 1.6.5: created $dmTest, updated $help
 # 1.6.6: created $rng, updated $help
-# 1.6.7: created error handler for $rng (rngErrorHandler)
-
+# 1.6.7: created error handler for $rng (@rng.error() - rngErrorHandler)
+# 1.6.8: fixed error handler for $rng (@rng.error() - rngErrorHandler)
 #sources: 
 # discord.py discord
 # https://discordpy.readthedocs.io/en/stable/api.html
