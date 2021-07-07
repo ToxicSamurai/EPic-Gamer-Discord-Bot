@@ -478,11 +478,11 @@ async def clips(ctx):
 
 @client.command()
 async def updateBot(ctx):
-  await ctx.send("Bot updated to 1.6.6!")
+  await ctx.send("Bot updated to 1.6.7!")
 
 @client.command()
 async def changelog(ctx):
-  await ctx.send("1.6.6: created $rng, updated $help")
+  await ctx.send("1.6.7: created error handler for $rng (rngErrorHandler)")
 
 @client.command()
 async def useless(ctx, amount=1):
@@ -502,11 +502,13 @@ async def sources(ctx):
 async def report(ctx):
   await ctx.send("https://dis.gd/report")
 
-
 @client.command()
 async def rng(ctx, inputNum : int):
   num = random.randint(1, inputNum)
   await ctx.send(f"{num}")
+
+@client.command()
+async def rngErrorHandler(ctx, error):
   if isinstance(error, commands.MissingRequiredArgument):
     await ctx.send("Please a number!")
 
@@ -849,6 +851,7 @@ client.run('ODAyMjU2ODY3Mjg4MDIzMDUx.YAsl7g.5Z6E_SyEnKzj-DHPBITA0FKYJ94')
 # 1.6.4: created $report
 # 1.6.5: created $dmTest, updated $help
 # 1.6.6: created $rng, updated $help
+# 1.6.7: created error handler for $rng (rngErrorHandler)
 
 #sources: 
 # discord.py discord
