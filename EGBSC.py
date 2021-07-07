@@ -506,11 +506,13 @@ async def report(ctx):
 async def rng(ctx, inputNum : int):
   num = random.randint(1, inputNum)
   await ctx.send(f"{num}")
+# 7/7/21: All my own code!
 
 @rng.error
 async def rng_error(ctx, error):
   if isinstance(error, commands.MissingRequiredArgument):
     await ctx.send("Please mention a number!")
+# 7/7/21: This one too
 
 # vc commands----------------------------------------------
 @client.command()
@@ -790,6 +792,13 @@ async def doge(ctx):
     await ctx.send("https://cdn.discordapp.com/attachments/802258582950117430/857732965365579812/5845e643fb0b0755fa99d7ea.png")
   # ultra rare doge commands
 
+# 1.7 commands----------------------------------------------
+@client.command()
+async def suggest(ctx, suggestion : str)
+  user = client.get_user(253668275496419329)
+  await channel.send(f"{suggestion}")
+  ctx.send("Thanks for the suggestion!")
+
 # database commands----------------------------------------------
 @client.command()
 async def pingTest(ctx):
@@ -803,6 +812,7 @@ async def pingTest(ctx):
   collection.insert_one(pingTest_cm)
 
   await ctx.channel.send("Ping sent to database")
+# unused as of 7/7/21
 
 client.run('ODAyMjU2ODY3Mjg4MDIzMDUx.YAsl7g.5Z6E_SyEnKzj-DHPBITA0FKYJ94')
 
@@ -852,10 +862,12 @@ client.run('ODAyMjU2ODY3Mjg4MDIzMDUx.YAsl7g.5Z6E_SyEnKzj-DHPBITA0FKYJ94')
 # 1.6.5: created $dmTest, updated $help
 # 1.6.6: created $rng, updated $help
 # 1.6.7: created error handler for $rng (@rng.error() - rngErrorHandler)
-# 1.6.8: fixed and edited error handler for $rng (@rng.error - rng_error)
+# 1.6.8: fixed and edited error handler for $rng (@rng.error - rng_error) (7/7/21)
+
 #sources: 
 # discord.py discord
 # https://discordpy.readthedocs.io/en/stable/api.html
+  # https://discordpy.readthedocs.io/en/stable/faq.html#how-do-i-send-a-dm
 # https://stackoverflow.com/questions/65891543/how-would-i-respond-to-a-message-with-what-the-user-said
 # https://github.com/discordjs/discord.js/issues/439 
 # https://realpython.com/how-to-make-a-discord-bot-python/
@@ -866,9 +878,12 @@ client.run('ODAyMjU2ODY3Mjg4MDIzMDUx.YAsl7g.5Z6E_SyEnKzj-DHPBITA0FKYJ94')
   # https://www.youtube.com/watch?v=K5pkOrjeAIs
 # https://www.youtube.com/channel/UCwBjRPUuOefh6iFvG6zLhrg
   # https://www.youtube.com/watch?v=pL2EuhSV7tw
-#https://www.youtube.com/channel/UCdNnHNkhaRYr-3nhQqY7_dw
-  #https://www.youtube.com/watch?v=ml-5tXRmmFk
-  #https://www.youtube.com/watch?v=wBbgCUQZNzM
-#https://stackoverflow.com/questions/22786068/how-to-avoid-http-error-429-too-many-requests-python
-#https://www.youtube.com/channel/UC2ITRZ4_Di-KMHSIylTQbBA
-  #https://www.youtube.com/watch?v=HPaadO_sRD4
+# https://www.youtube.com/channel/UCdNnHNkhaRYr-3nhQqY7_dw
+  # https://www.youtube.com/watch?v=ml-5tXRmmFk
+  # https://www.youtube.com/watch?v=wBbgCUQZNzM
+# https://stackoverflow.com/questions/22786068/how-to-avoid-http-error-429-too-many-requests-python
+# https://www.youtube.com/channel/UC2ITRZ4_Di-KMHSIylTQbBA
+  # https://www.youtube.com/watch?v=HPaadO_sRD4
+# https://docs.python.org/3/library/random.html
+# https://www.youtube.com/channel/UCPzRFFn1B_-ztBy5ZTNnP1A
+  # https://www.youtube.com/watch?v=TaQq9Il5ifQ
