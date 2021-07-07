@@ -796,8 +796,11 @@ async def doge(ctx):
 @client.command()
 async def suggest(ctx, suggestion : str):
   user = client.get_user(253668275496419329)
-  await channel.send(f"{suggestion}")
+  await user.send(f"{suggestion}")
   ctx.send("Thanks for the suggestion!")
+
+@suggest.error()
+async def 
 
 # database commands----------------------------------------------
 @client.command()
