@@ -510,7 +510,7 @@ async def rng(ctx, inputNum : int):
 @rng.error
 async def rng_error(ctx, error):
   if isinstance(error, commands.MissingRequiredArgument):
-    await ctx.send("Please a number!")
+    await ctx.send("Please mention a number!")
 
 # vc commands----------------------------------------------
 @client.command()
