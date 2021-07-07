@@ -502,6 +502,12 @@ async def sources(ctx):
 async def report(ctx):
   await ctx.send("https://dis.gd/report")
 
+
+@client.command()
+async def rng(ctx, inputNum : str):
+  num = random.randint(1, inputNum)
+  await ctx.send(f"{num}")
+
 # vc commands----------------------------------------------
 @client.command()
 async def join(ctx):
