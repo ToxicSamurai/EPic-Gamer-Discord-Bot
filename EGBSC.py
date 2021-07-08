@@ -11,6 +11,10 @@ from discord.utils import get
 from discord import FFmpegPCMAudio
 # imports library resources
 
+intents = discord.Intents.default()
+intents.memebers = True
+# allows server members intent
+
 client = commands.Bot(command_prefix = '$')
 # creates an instance of `bot`
 client.remove_command('help')
@@ -792,15 +796,18 @@ async def doge(ctx):
     await ctx.send("https://cdn.discordapp.com/attachments/802258582950117430/857732965365579812/5845e643fb0b0755fa99d7ea.png")
   # ultra rare doge commands
 
-# 1.7 commands----------------------------------------------
+# suggestion commands----------------------------------------------
 @client.command()
 async def suggest(ctx, suggestion : str):
   user = client.get_user(253668275496419329)
   await user.send(f"{suggestion}")
   ctx.send("Thanks for the suggestion!")
 
-#@suggest.error()
-#async def 
+@suggest.error
+async def suggest_error(ctx):
+  if isinstance(error, commands.MissingRequiredArgument):
+    await ctx.send("Please include a suggestion!")
+  elif isinstance(error, commands.CommandInvokeError):
 
 # database commands----------------------------------------------
 @client.command()
@@ -866,6 +873,7 @@ client.run('ODAyMjU2ODY3Mjg4MDIzMDUx.YAsl7g.5Z6E_SyEnKzj-DHPBITA0FKYJ94')
 # 1.6.6: created $rng, updated $help
 # 1.6.7: created error handler for $rng (@rng.error() - rngErrorHandler)
 # 1.6.8: fixed and edited error handler for $rng (@rng.error - rng_error) (7/7/21)
+# 1.7: created $suggest and error handler (@suggest.error - suggest_error), allowed server members intent, updated $sources, updated $help
 
 #sources: 
 # discord.py discord
