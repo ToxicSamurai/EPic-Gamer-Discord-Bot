@@ -808,6 +808,7 @@ async def suggest_error(ctx):
   if isinstance(error, commands.MissingRequiredArgument):
     await ctx.send("Please include a suggestion!")
   elif isinstance(error, commands.CommandInvokeError):
+    await ctx.send("Worker1 reports: discord.ext.commands.errors.CommandInvokeError: Command raised an exception: AttributeError: 'NoneType' object has no attribute 'send'")
 
 # database commands----------------------------------------------
 @client.command()
