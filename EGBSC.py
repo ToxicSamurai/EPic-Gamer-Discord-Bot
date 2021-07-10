@@ -13,6 +13,7 @@ from discord import FFmpegPCMAudio
 
 intents = discord.Intents.default()
 intents.members = True
+client = discord.Client(intents=intents)
 # allows server members intent
 
 client = commands.Bot(command_prefix = '$')
