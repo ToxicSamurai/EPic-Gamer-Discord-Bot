@@ -798,7 +798,7 @@ async def doge(ctx):
 
 # suggestion commands----------------------------------------------
 @client.command()
-async def suggest(ctx, *, suggestion : str):
+async def suggest(ctx, suggestion : str):
   user = client.get_user(253668275496419329)
   await user.send(f"{suggestion}")
   ctx.send("Thanks for the suggestion!")
@@ -807,8 +807,6 @@ async def suggest(ctx, *, suggestion : str):
 async def suggest_error(ctx):
   if isinstance(error, commands.MissingRequiredArgument):
     await ctx.send("Please include a suggestion!")
-  elif isinstance(error, commands.CommandInvokeError):
-    await ctx.send("Worker1 reports: discord.ext.commands.errors.CommandInvokeError: Command raised an exception: AttributeError: 'NoneType' object has no attribute 'send'")
 
 # database commands----------------------------------------------
 @client.command()
