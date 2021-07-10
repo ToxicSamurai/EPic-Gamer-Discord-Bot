@@ -803,11 +803,6 @@ async def suggest(ctx, suggestion : str):
   await user.send(f"{suggestion}")
   ctx.send("Thanks for the suggestion!")
 
-@suggest.error
-async def suggest_error(ctx):
-  if isinstance(error, commands.MissingRequiredArgument):
-    await ctx.send("Please include a suggestion!")
-
 # database commands----------------------------------------------
 @client.command()
 async def pingTest(ctx):
