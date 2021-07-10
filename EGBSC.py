@@ -798,7 +798,7 @@ async def doge(ctx):
 
 # suggestion commands----------------------------------------------
 @client.command()
-async def suggest(ctx, suggestion : str):
+async def suggest(ctx, *, suggestion : str):
   user = client.get_user(253668275496419329)
   await user.send(f"{suggestion}")
   ctx.send("Thanks for the suggestion!")
