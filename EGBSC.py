@@ -806,7 +806,7 @@ async def doge(ctx):
 #  num = random.randint(1, 1000)
 
 @client.command()
-async def moveTest(ctx):
+async def moveTest(self, ctx):
   self.ctx = ctx
   await move_to(channel=864264378362494978, reason="VC roulette command")
 
