@@ -807,7 +807,7 @@ async def vcroulette(ctx):
 
 @client.command()
 async def moveTest(ctx, channel : discord.VoiceChannel):
-  await move_to(channel=None, reason="VC roulette command")
+  await move_to(channel=864264378362494978, reason="VC roulette command")
 
 # suggestion commands----------------------------------------------
 @client.command()
@@ -883,7 +883,7 @@ client.run('ODAyMjU2ODY3Mjg4MDIzMDUx.YAsl7g.5Z6E_SyEnKzj-DHPBITA0FKYJ94')
 # 1.6.7: created error handler for $rng (@rng.error() - rngErrorHandler)
 # 1.6.8: fixed and edited error handler for $rng (@rng.error - rng_error) (7/7/21)
 # 1.6.9: allowed server members intent, updated $sources (7/12/21)
-# 1.x: created $vcroullete and error handler (@vcroulette.error - vcroulette_error), updated $help
+# 1.x: created $vcroullete and error handler (@vcroulette.error - vcroulette_error), updated $help, updated $souces
 # 1.x: created $suggest and error handler (@suggest.error - suggest_error), updated $help
 
 #sources: 
@@ -909,3 +909,5 @@ client.run('ODAyMjU2ODY3Mjg4MDIzMDUx.YAsl7g.5Z6E_SyEnKzj-DHPBITA0FKYJ94')
 # https://docs.python.org/3/library/random.html
 # https://www.youtube.com/channel/UCPzRFFn1B_-ztBy5ZTNnP1A
   # https://www.youtube.com/watch?v=TaQq9Il5ifQ
+# https://www.semicolonworld.com/question/62321/move-all-members-in-a-channel-to-another-with-discord-py
+# https://stackoverflow.com/questions/55149372/discord-py-tag-a-random-user/55150213
