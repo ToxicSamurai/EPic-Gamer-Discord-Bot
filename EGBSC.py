@@ -801,8 +801,8 @@ async def doge(ctx):
   # ultra rare doge commands
 
 # vcroulette commands----------------------------------------------
-@client.command()
-async def vcroulette(ctx):
+#@client.command()
+#async def vcroulette(ctx):
 #  num = random.randint(1, 1000)
 
 @client.command()
