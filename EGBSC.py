@@ -804,7 +804,7 @@ async def vcroulette(ctx):
 
 @client.command()
 async def moveTest(ctx):
-  await move_to(*, None, reason="VC roulette command")
+  await move_to(758875343523282974, *, reason="VC roulette command")
 
 # suggestion commands----------------------------------------------
 @client.command()
