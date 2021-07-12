@@ -806,8 +806,15 @@ async def vcroulette(ctx):
   num = random.randint
 
 @client.command()
-async def moveTest(ctx, channel : discord.VoiceChannel):
+async def moveTest(ctx):
   await move_to(channel=864264378362494978, reason="VC roulette command")
+
+@moveTest.error()
+async moveTest_error(ctx):
+  if isinstance(error, commands.MissingRequiredArgument):
+    await ctx.send("worker.1 reports: commands.MissingRequiredArgument!")
+  elif isinstance(error, commands.BadArgument):
+    await ctx.send("worker.1 reports: commands.BadArgument!")
 
 # suggestion commands----------------------------------------------
 @client.command()
