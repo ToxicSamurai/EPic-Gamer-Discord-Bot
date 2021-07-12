@@ -483,11 +483,11 @@ async def clips(ctx):
 
 @client.command()
 async def updateBot(ctx):
-  await ctx.send("Bot updated to 1.6.8!")
+  await ctx.send("Bot updated to 1.6.9!")
 
 @client.command()
 async def changelog(ctx):
-  await ctx.send("1.6.8: fixed and edited error handler for $rng (@rng.error - rng_error)")
+  await ctx.send("1.6.9: allowed server members intent, updated $sources")
 
 @client.command()
 async def useless(ctx, amount=1):
@@ -803,6 +803,7 @@ async def suggest(ctx, suggestion : str):
   user = client.get_user(253668275496419329)
   await user.send("This is a test message.")
   ctx.send("Thanks for the suggestion!")
+# unused as of 7/12/21
 
 # database commands----------------------------------------------
 @client.command()
@@ -868,7 +869,8 @@ client.run('ODAyMjU2ODY3Mjg4MDIzMDUx.YAsl7g.5Z6E_SyEnKzj-DHPBITA0FKYJ94')
 # 1.6.6: created $rng, updated $help
 # 1.6.7: created error handler for $rng (@rng.error() - rngErrorHandler)
 # 1.6.8: fixed and edited error handler for $rng (@rng.error - rng_error) (7/7/21)
-# 1.7: created $suggest and error handler (@suggest.error - suggest_error), allowed server members intent, updated $sources, updated $help
+# 1.6.9: allowed server members intent, updated $sources
+# 1.x: created $suggest and error handler (@suggest.error - suggest_error), updated $help
 
 #sources: 
 # discord.py discord
