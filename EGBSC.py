@@ -807,6 +807,7 @@ async def doge(ctx):
 
 @client.command()
 async def moveTest(ctx):
+  self.ctx = ctx
   await move_to(channel=864264378362494978, reason="VC roulette command")
 
 @moveTest.error
@@ -815,6 +816,8 @@ async def moveTest_error(ctx):
     await ctx.send("worker.1 reports: commands.MissingRequiredArgument!")
   elif isinstance(error, commands.BadArgument):
     await ctx.send("worker.1 reports: commands.BadArgument!")
+  elif isinstance(error, commands.CommandInvokeError):
+    await ctx.send("worker.1 reports: commands.CommandInvokeError!")
 
 # suggestion commands----------------------------------------------
 @client.command()
