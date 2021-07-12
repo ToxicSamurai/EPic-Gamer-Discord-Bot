@@ -4,6 +4,7 @@ import youtube_dl
 import asyncio
 import os
 import pymongo
+from random import choice
 from pymongo import MongoClient
 from youtube_dl import YoutubeDL
 from discord.ext import commands
@@ -327,6 +328,8 @@ lennyDict = [
   ),
 ]
 # dictionary for lenny faces
+
+userDict = []
 
 @client.event
 async def on_ready():
@@ -803,8 +806,8 @@ async def vcroulette(ctx):
   num = random.randint
 
 @client.command()
-async def moveTest(ctx):
-  await move_to(*, channel=None, reason="VC roulette command")
+async def moveTest(ctx, channel : discord.VoiceChannel):
+  await move_to(channel=None, reason="VC roulette command")
 
 # suggestion commands----------------------------------------------
 @client.command()
@@ -812,6 +815,7 @@ async def suggest(ctx, suggestion : str):
   user = client.get_user(253668275496419329)
   await user.send("This is a test message.")
   ctx.send("Thanks for the suggestion!")
+# 7/12/21: Mostly my own code, but still doesn't work with an error I don't know
 # unused as of 7/12/21
 
 # database commands----------------------------------------------
@@ -878,7 +882,7 @@ client.run('ODAyMjU2ODY3Mjg4MDIzMDUx.YAsl7g.5Z6E_SyEnKzj-DHPBITA0FKYJ94')
 # 1.6.6: created $rng, updated $help
 # 1.6.7: created error handler for $rng (@rng.error() - rngErrorHandler)
 # 1.6.8: fixed and edited error handler for $rng (@rng.error - rng_error) (7/7/21)
-# 1.6.9: allowed server members intent, updated $sources
+# 1.6.9: allowed server members intent, updated $sources (7/12/21)
 # 1.x: created $vcroullete and error handler (@vcroulette.error - vcroulette_error), updated $help
 # 1.x: created $suggest and error handler (@suggest.error - suggest_error), updated $help
 
