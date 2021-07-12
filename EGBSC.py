@@ -804,7 +804,7 @@ async def vcroulette(ctx):
 
 @client.command()
 async def moveTest(ctx):
-  await move_to(None, *, reason="VC roulette command")
+  await move_to(*, None, reason="VC roulette command")
 
 # suggestion commands----------------------------------------------
 @client.command()
@@ -879,6 +879,7 @@ client.run('ODAyMjU2ODY3Mjg4MDIzMDUx.YAsl7g.5Z6E_SyEnKzj-DHPBITA0FKYJ94')
 # 1.6.7: created error handler for $rng (@rng.error() - rngErrorHandler)
 # 1.6.8: fixed and edited error handler for $rng (@rng.error - rng_error) (7/7/21)
 # 1.6.9: allowed server members intent, updated $sources
+# 1.x: created $vcroullete and error handler (@vcroulette.error - vcroulette_error), updated $help
 # 1.x: created $suggest and error handler (@suggest.error - suggest_error), updated $help
 
 #sources: 
