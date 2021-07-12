@@ -803,14 +803,14 @@ async def doge(ctx):
 # vcroulette commands----------------------------------------------
 @client.command()
 async def vcroulette(ctx):
-  num = random.randint
+#  num = random.randint(1, 1000)
 
 @client.command()
 async def moveTest(ctx):
   await move_to(channel=864264378362494978, reason="VC roulette command")
 
-@moveTest.error()
-async moveTest_error(ctx):
+@moveTest.error
+async def moveTest_error(ctx):
   if isinstance(error, commands.MissingRequiredArgument):
     await ctx.send("worker.1 reports: commands.MissingRequiredArgument!")
   elif isinstance(error, commands.BadArgument):
