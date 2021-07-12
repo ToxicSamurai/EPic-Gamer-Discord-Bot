@@ -797,6 +797,15 @@ async def doge(ctx):
     await ctx.send("https://cdn.discordapp.com/attachments/802258582950117430/857732965365579812/5845e643fb0b0755fa99d7ea.png")
   # ultra rare doge commands
 
+# vcroulette commands----------------------------------------------
+@client.command()
+async def vcroulette(ctx):
+  num = random.randint
+
+@client.command()
+async def moveTest(ctx):
+  await move_to(None, *, reason="VC roulette command")
+
 # suggestion commands----------------------------------------------
 @client.command()
 async def suggest(ctx, suggestion : str):
