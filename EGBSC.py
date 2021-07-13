@@ -807,7 +807,7 @@ async def doge(ctx):
 
 @client.command()
 async def moveTest(ctx):
-  await move_to(channel=864264378362494978, reason="VC roulette command")
+  await move_to(channel=864264378362494978)
 
 @moveTest.error
 async def moveTest_error(ctx):
