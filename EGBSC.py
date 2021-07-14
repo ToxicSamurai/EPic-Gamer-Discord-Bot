@@ -802,21 +802,22 @@ async def doge(ctx):
 
 # vcroulette commands----------------------------------------------
 #@client.command()
-#async def vcroulette(ctx):
+#async def vcroulette(ctx, member : str):
 #  num = random.randint(1, 1000)
 
 @client.command()
 async def moveTest(ctx):
   await move_to(channel=864264378362494978)
 
-@moveTest.error
-async def moveTest_error(ctx):
-  if isinstance(error, commands.MissingRequiredArgument):
-    await ctx.send("worker.1 reports: commands.MissingRequiredArgument!")
-  elif isinstance(error, commands.BadArgument):
-    await ctx.send("worker.1 reports: commands.BadArgument!")
-  elif isinstance(error, commands.CommandInvokeError):
-    await ctx.send("worker.1 reports: commands.CommandInvokeError!")
+#@moveTest.error
+#async def moveTest_error(ctx):
+  #if isinstance(error, commands.MissingRequiredArgument):
+    #await ctx.send("worker.1 reports: commands.MissingRequiredArgument!")
+  #elif isinstance(error, commands.BadArgument):
+    #await ctx.send("worker.1 reports: commands.BadArgument!")
+  #elif isinstance(error, commands.CommandInvokeError):
+    #await ctx.send("worker.1 reports: commands.CommandInvokeError!")
+# unused error handler for moveTest
 
 # suggestion commands----------------------------------------------
 @client.command()
