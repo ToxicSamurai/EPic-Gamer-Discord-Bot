@@ -806,9 +806,8 @@ async def doge(ctx):
 #  num = random.randint(1, 1000)
 
 @client.command()
-async def moveTest(ctx):
-  await members.move_to(channel=864264378362494978)
-
+async def moveTest(ctx, member: discord.Member):
+  await member.move_to(channel=864264378362494978)
 
 #@moveTest.error
 #async def moveTest_error(ctx):
