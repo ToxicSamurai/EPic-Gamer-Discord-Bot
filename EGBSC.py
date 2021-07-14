@@ -809,6 +809,7 @@ async def doge(ctx):
 async def moveTest(ctx):
   await move_to(channel=864264378362494978)
 
+
 #@moveTest.error
 #async def moveTest_error(ctx):
   #if isinstance(error, commands.MissingRequiredArgument):
@@ -817,7 +818,7 @@ async def moveTest(ctx):
     #await ctx.send("worker.1 reports: commands.BadArgument!")
   #elif isinstance(error, commands.CommandInvokeError):
     #await ctx.send("worker.1 reports: commands.CommandInvokeError!")
-# unused error handler for moveTest
+# unused error handler for moveTest as of 7/13/21
 
 # suggestion commands----------------------------------------------
 @client.command()
@@ -842,6 +843,15 @@ async def pingTest(ctx):
 
   await ctx.channel.send("Ping sent to database")
 # unused as of 7/7/21
+
+#@client.command()
+#async def message_count(ctx, channel: discord.TextChannel=None):
+  #channel = channel or ctx.channel
+  #count = 0
+  #async for _ in channel.history(limit=None):
+    #count += 1
+  #await ctx.send("There were {} messages in {}".format(count, channel.mention))
+# https://stackoverflow.com/questions/52214425/how-to-get-how-many-messages-has-been-sent-in-a-channel
 
 client.run('ODAyMjU2ODY3Mjg4MDIzMDUx.YAsl7g.5Z6E_SyEnKzj-DHPBITA0FKYJ94')
 
