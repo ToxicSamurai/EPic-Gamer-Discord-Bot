@@ -345,6 +345,9 @@ deadChatDict = [
   (
     'https://tenor.com/view/cringe-dead-chat-kermit-wtf-gif-20484958'
   ),
+  (
+    'https://tenor.com/view/kel-omori-tenor-gif-20334771'
+  ),
 ]
 
 userDict = []
