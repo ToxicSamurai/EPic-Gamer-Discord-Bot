@@ -331,20 +331,20 @@ lennyDict = [
 
 deadChatDict = [
   (
-    'https://tenor.com/view/dead-chat-gif-18800792',
-  )
+    'https://tenor.com/view/dead-chat-gif-18800792'
+  ),
   (
-    'https://tenor.com/view/googas-wet-wet-cat-dead-chat-dead-chat-xd-gif-20820186',
-  )
+    'https://tenor.com/view/googas-wet-wet-cat-dead-chat-dead-chat-xd-gif-20820186'
+  ),
   (
-    'https://tenor.com/view/dead-chat-dead-chat-cat-scream-gif-20859754',
-  )
+    'https://tenor.com/view/dead-chat-dead-chat-cat-scream-gif-20859754'
+  ),
   (
-    'https://tenor.com/view/speed-dead-chat-fun-gif-18992739',
-  )
+    'https://tenor.com/view/speed-dead-chat-fun-gif-18992739'
+  ),
   (
-    'https://tenor.com/view/cringe-dead-chat-kermit-wtf-gif-20484958',
-  )
+    'https://tenor.com/view/cringe-dead-chat-kermit-wtf-gif-20484958'
+  ),
 ]
 
 userDict = []
