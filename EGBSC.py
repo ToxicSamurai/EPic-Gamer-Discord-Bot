@@ -512,7 +512,7 @@ async def updateBot(ctx):
 
 @client.command()
 async def changelog(ctx):
-  await ctx.send("1.6.10: reorganized indentation on stqDict, created $deadchat, created dict for $deadchat (deadChatDict), updated $help")
+  await ctx.send("1.6.10: reorganized indentation on stqDict, created $deadchat, created dict for $deadchat (deadChatDict), updated $help, deleted song.mp3 from local (7/15/21)")
 
 @client.command()
 async def useless(ctx, amount=1):
@@ -871,7 +871,7 @@ async def pingTest(ctx):
   await ctx.channel.send("Ping sent to database")
 # unused as of 7/7/21
 
-#@client.command()
+#@client.command()g
 #async def message_count(ctx, channel: discord.TextChannel=None):
   #channel = channel or ctx.channel
   #count = 0
@@ -930,7 +930,7 @@ client.run('ODAyMjU2ODY3Mjg4MDIzMDUx.YAsl7g.5Z6E_SyEnKzj-DHPBITA0FKYJ94')
 # 1.6.7: created error handler for $rng (@rng.error() - rngErrorHandler)
 # 1.6.8: fixed and edited error handler for $rng (@rng.error - rng_error) (7/7/21)
 # 1.6.9: allowed server members intent, updated $sources (7/12/21)
-# 1.6.10: reorganized indentation on stqDict, created $deadchat, created dict for $deadchat (deadChatDict), updated $help
+# 1.6.10: reorganized indentation on stqDict, created $deadchat, created dict for $deadchat (deadChatDict), updated $help, deleted song.mp3 from local (7/15/21)
 # 1.x: created $vcroullete and error handler (@vcroulette.error - vcroulette_error), updated $help, updated $souces
 # 1.x: created $suggest and error handler (@suggest.error - suggest_error), updated $help
 
