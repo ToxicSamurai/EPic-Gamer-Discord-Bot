@@ -48,37 +48,37 @@ winConditions = [
 # win condition array (coordinates) for tic-tac-toe
 
 stqDict = ['All warfare is based on deception.',
-    (
-     'Throw your soldiers into positions whence there is no escape, and they will prefer death to flight' 
-    ),
-    (
-      'The supreme art of war is to subdue the enemy without fighting.'
-    ),
-    (
-      'Hence to fight and conquer in all your battles is not supreme excellence; supreme excellence consists in breaking the enemys resistance without fighting.'
-    ),
-    (
-      'Victorious warriors win first and then go to war, while defeated warriors go to war first and then seek to win.'
-    ),
-    (
-      'Strategy without tactics is the slowest route to victory. Tactics without strategy is the noise before defeat.'
-    ),
-    (
-      'Opportunities multiply as they are seized'
-    ),
-    (
-      'The opportunity to secure ourselves against defeat lies in our own hands, but the opportunity of defeating the enemy is provided by the enemy himself.'
-    ),
-    (
-      'There is no instance of a nation benefitting from prolonged warfare.'
-    ),
-    (
-      'Pretend inferiority and encourage his arrogance.'
-    ),
-    (
-      'The good fighters of old first put themselves beyond the possibility of defeat, and then waited for an opportunity of defeating the enemy.'
-    ),
-    ]
+  (
+    'Throw your soldiers into positions whence there is no escape, and they will prefer death to flight' 
+  ),
+  (
+    'The supreme art of war is to subdue the enemy without fighting.'
+  ),
+  (
+    'Hence to fight and conquer in all your battles is not supreme excellence; supreme excellence consists in breaking the enemys resistance without fighting.'
+  ),
+  (
+    'Victorious warriors win first and then go to war, while defeated warriors go to war first and then seek to win.'
+  ),
+  (
+    'Strategy without tactics is the slowest route to victory. Tactics without strategy is the noise before defeat.'
+  ),
+  (
+    'Opportunities multiply as they are seized'
+  ),
+  (
+    'The opportunity to secure ourselves against defeat lies in our own hands, but the opportunity of defeating the enemy is provided by the enemy himself.'
+  ),
+  (
+    'There is no instance of a nation benefitting from prolonged warfare.'
+  ),
+  (
+    'Pretend inferiority and encourage his arrogance.'
+  ),
+  (
+    'The good fighters of old first put themselves beyond the possibility of defeat, and then waited for an opportunity of defeating the enemy.'
+  ),
+  ]
 # dictionary for Sun Tzu Quotes
 
 aliceDict = [
@@ -329,7 +329,26 @@ lennyDict = [
 ]
 # dictionary for lenny faces
 
+deadChatDict = [
+  (
+    'https://tenor.com/view/dead-chat-gif-18800792',
+  )
+  (
+    'https://tenor.com/view/googas-wet-wet-cat-dead-chat-dead-chat-xd-gif-20820186',
+  )
+  (
+    'https://tenor.com/view/dead-chat-dead-chat-cat-scream-gif-20859754',
+  )
+  (
+    'https://tenor.com/view/speed-dead-chat-fun-gif-18992739',
+  )
+  (
+    'https://tenor.com/view/cringe-dead-chat-kermit-wtf-gif-20484958',
+  )
+]
+
 userDict = []
+# unused dictionary for vcroulette
 
 @client.event
 async def on_ready():
@@ -486,11 +505,11 @@ async def clips(ctx):
 
 @client.command()
 async def updateBot(ctx):
-  await ctx.send("Bot updated to 1.6.9!")
+  await ctx.send("Bot updated to 1.6.10!")
 
 @client.command()
 async def changelog(ctx):
-  await ctx.send("1.6.9: allowed server members intent, updated $sources")
+  await ctx.send("1.6.10: reorganized indentation on stqDict, created $deadchat, created dict for $deadchat (deadChatDict), updated $help")
 
 @client.command()
 async def useless(ctx, amount=1):
@@ -521,6 +540,12 @@ async def rng_error(ctx, error):
   if isinstance(error, commands.MissingRequiredArgument):
     await ctx.send("Please mention a number!")
 # 7/7/21: This one too
+
+@client.command()
+async def deadchat(ctx):
+  reponse = random.choice(deadChatDict)
+  await ctx.send("dead chat xd ||@everyone||")
+  await ctx.send(response)
 
 # vc commands----------------------------------------------
 @client.command()
@@ -902,6 +927,7 @@ client.run('ODAyMjU2ODY3Mjg4MDIzMDUx.YAsl7g.5Z6E_SyEnKzj-DHPBITA0FKYJ94')
 # 1.6.7: created error handler for $rng (@rng.error() - rngErrorHandler)
 # 1.6.8: fixed and edited error handler for $rng (@rng.error - rng_error) (7/7/21)
 # 1.6.9: allowed server members intent, updated $sources (7/12/21)
+# 1.6.10: reorganized indentation on stqDict, created $deadchat, created dict for $deadchat (deadChatDict), updated $help
 # 1.x: created $vcroullete and error handler (@vcroulette.error - vcroulette_error), updated $help, updated $souces
 # 1.x: created $suggest and error handler (@suggest.error - suggest_error), updated $help
 
