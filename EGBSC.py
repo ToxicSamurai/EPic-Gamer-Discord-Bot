@@ -546,7 +546,7 @@ async def rng_error(ctx, error):
 
 @client.command()
 async def deadchat(ctx):
-  reponse = random.choice(deadChatDict)
+  response = random.choice(deadChatDict)
   await ctx.send("dead chat xd ||@everyone||")
   await ctx.send(response)
 
