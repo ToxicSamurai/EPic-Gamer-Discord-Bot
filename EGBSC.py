@@ -871,7 +871,7 @@ async def pingTest(ctx):
   await ctx.channel.send("Ping sent to database")
 # unused as of 7/7/21
 
-#@client.command()g
+#@client.command()
 #async def message_count(ctx, channel: discord.TextChannel=None):
   #channel = channel or ctx.channel
   #count = 0
