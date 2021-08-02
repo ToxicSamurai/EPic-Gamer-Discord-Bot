@@ -32,6 +32,8 @@ turn = ""
 gameOver = True
 # variables for tic-tac-toe
 
+intA = int
+intB = int
 modulo = intA % intB
 split = int(intA/intB)
 # variables for euclid's algorithm
@@ -857,9 +859,14 @@ async def moveTest(ctx, member: discord.Member):
 
 # euclid's algorithm commands----------------------------------------------
 @client.command()
-async def euclid(ctx, intA : int, intB : int):
+async def euclid(ctx, p : int, q : int):
+  global intA
+  global intB
   global modulo
   global split
+
+  intA = p
+  intB = q
 
   while modulo != 0:
     intA = intB
