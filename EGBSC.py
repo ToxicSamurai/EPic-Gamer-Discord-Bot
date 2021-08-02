@@ -511,7 +511,7 @@ async def apiref(ctx):
 
 @client.command()
 async def help(ctx):
-  await ctx.send("```\nCommands:\n$stq - Sun Tzu Quotes\n$twitch - Twitch link\n$call - @ here\n$phys - Scientific papers link\n$navyseals - Navy Seals Copypasta\n$adam - Adam Wilson\n$vcroulette - Coming soon\n$rejoin/$rejoinbtp - Discord invite link\n$APIref - Documentation\n$join/leave - Lets the bot join/leave your current vc\n$vcHelp - Displays help for voice channel commands\n$tttHelp - Displays help for tic tac toe commands\n$alice - Pictures of Jacob's cat\n$clips - Clips channel link\n$lenny - Posts a random lenny face\n$sources - Links to sources I used to create this bot\n$useless - This command is useless, do not use it.\n$doge - Posts a doge, however there's a chance for a rare or ultra rare doge\n$report - Discord report link\n$rng (number) - Chooses a random number between 1 and the entered number\n$deadchat - Calls @ here and dead chats\nPrefixes:\nHurr/Durr - Hurrguy/Durrguy\nRed sus - red sus before\nWhen the imposter is sus - sus!\nI'm - Dad joke\nPog - WOO BABY\nP(a)edophile - Uno reverse\nYa\'ll - Corrects your ignorant mistake\nSussy - sussus amogus\nKorea - Korea spam```")
+  await ctx.send("```\nCommands:\n$stq - Sun Tzu Quotes\n$twitch - Twitch link\n$call - @ here\n$phys - Scientific papers link\n$navyseals - Navy Seals Copypasta\n$adam - Adam Wilson\n$vcroulette - Coming soon\n$rejoin/$rejoinbtp - Discord invite link\n$APIref - Documentation\n$join/leave - Lets the bot join/leave your current vc\n$vcHelp - Displays help for voice channel commands\n$tttHelp - Displays help for tic tac toe commands\n$alice - Pictures of Jacob's cat\n$clips - Clips channel link\n$lenny - Posts a random lenny face\n$sources - Links to sources I used to create this bot\n$useless - This command is useless, do not use it.\n$doge - Posts a doge, however there's a chance for a rare or ultra rare doge\n$report - Discord report link\n$rng (number) - Chooses a random number between 1 and the entered number\n$deadchat - Calls @ here and dead chats\n$github - github link\nPrefixes:\nHurr/Durr - Hurrguy/Durrguy\nRed sus - red sus before\nWhen the imposter is sus - sus!\nI'm - Dad joke\nPog - WOO BABY\nP(a)edophile - Uno reverse\nYa\'ll - Corrects your ignorant mistake\nSussy - sussus amogus\nKorea - Korea spam```")
 
 @client.command()
 async def clips(ctx):
@@ -560,6 +560,10 @@ async def deadchat(ctx):
   response = random.choice(deadChatDict)
   await ctx.send("dead chat xd ||@here||")
   await ctx.send(response)
+
+@client.command()
+async def github(ctx):
+  ctx.send("https://github.com/ToxicSamurai")
 
 # vc commands----------------------------------------------
 @client.command()
@@ -876,43 +880,6 @@ async def euclid(ctx, p : int, q : int):
     modulo = intA - (intB * split)
 
     ctx.send(intB)
-  #await step1()
-
-'''def step1(){
-  if intB == 0:
-    step7()
-  else:
-    step2()
-}
-
-def step2(){
-  if intA > intB:
-    step5()
-  else:
-    step3()
-}
-
-def step3(){
-  intB = intB - intA
-  step4()
-}
-
-def step4(){
-  step1()
-}
-
-def step5(){
-  intA = intA - intB
-  step6()
-}
-
-def step6(){
-  step1()
-}
-
-def step7(){
-  ctx.send(f"{intA}")
-}'''
 
 # suggestion commands----------------------------------------------
 @client.command()
@@ -998,6 +965,7 @@ client.run('ODAyMjU2ODY3Mjg4MDIzMDUx.YAsl7g.5Z6E_SyEnKzj-DHPBITA0FKYJ94')
 # 1.6.8: fixed and edited error handler for $rng (@rng.error - rng_error) (7/7/21)
 # 1.6.9: allowed server members intent, updated $sources (7/12/21)
 # 1.6.10: (updated changelog) reorganized indentation on stqDict, created $deadchat, created dict for $deadchat (deadChatDict), updated $help, deleted song.mp3 from local (7/15/21)
+# 1.6.11: created $github, edited $help
 # 1.x: created $vcroullete and error handler (@vcroulette.error - vcroulette_error), updated $help, updated $souces
 # 1.x: created $suggest and error handler (@suggest.error - suggest_error), updated $help
 
