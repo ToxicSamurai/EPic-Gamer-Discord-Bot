@@ -905,7 +905,7 @@ async def euclid(ctx, intA : int, intB : int):
   else:
     intB = intB - intA
     if intB != 0:
-      ctx.sent("GCD not calculable at this moment.")
+      ctx.send("GCD not calculable at this moment.")
   #await step1()
 
 '''def step1(){
