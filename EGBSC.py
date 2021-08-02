@@ -852,7 +852,7 @@ async def moveTest(ctx, member: discord.Member):
 async def euclid(ctx, intA : int, intB : int):
   await step1()
 
-def step1(){
+def step1(ctx){
   if intB == 0:
     step7()
   else:
