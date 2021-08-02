@@ -35,7 +35,7 @@ gameOver = True
 
 intA = int
 intB = int
-modulo = intA % intB
+modulo = int(intA - (intB)*int(intA/intB))
 split = int(intA/intB)
 # variables for euclid's algorithm
 
