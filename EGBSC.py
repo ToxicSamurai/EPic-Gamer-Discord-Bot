@@ -1,3 +1,5 @@
+# You may use any part of this code, however you may not use the entire thing and you must credit me and the sources listed at the bottom in your code
+
 import discord
 import random
 import youtube_dl
@@ -914,7 +916,7 @@ async def pingTest(ctx):
   #await ctx.send("There were {} messages in {}".format(count, channel.mention))
 # https://stackoverflow.com/questions/52214425/how-to-get-how-many-messages-has-been-sent-in-a-channel
 
-client.run('ODAyMjU2ODY3Mjg4MDIzMDUx.YAsl7g.5Z6E_SyEnKzj-DHPBITA0FKYJ94')
+client.run('Your Token Here')
 
 #steps to push to Heroku
 # Go to save repo
