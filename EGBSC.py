@@ -854,62 +854,16 @@ async def moveTest(ctx, member: discord.Member):
 # euclid's algorithm commands----------------------------------------------
 @client.command()
 async def euclid(ctx, intA : int, intB : int):
-  if intB == 0:
-    ctx.send(f"{intA}")
-  elif intA > intB:
-    intA = intA - intB
-  else:
-    intB = intB - intA
-  if intB == 0:
-    ctx.send(f"{intA}")
-  elif intA > intB:
-    intA = intA - intB
-  else:
-    intB = intB - intA
-  if intB == 0:
-    ctx.send(f"{intA}")
-  elif intA > intB:
-    intA = intA - intB
-  else:
-    intB = intB - intA
-  if intB == 0:
-    ctx.send(f"{intA}")
-  elif intA > intB:
-    intA = intA - intB
-  else:
-    intB = intB - intA
-  if intB == 0:
-    ctx.send(f"{intA}")
-  elif intA > intB:
-    intA = intA - intB
-  else:
-    intB = intB - intA
-  if intB == 0:
-    ctx.send(f"{intA}")
-  elif intA > intB:
-    intA = intA - intB
-  else:
-    intB = intB - intA
-  if intB == 0:
-    ctx.send(f"{intA}")
-  elif intA > intB:
-    intA = intA - intB
-  else:
-    intB = intB - intA
-  if intB == 0:
-    ctx.send(f"{intA}")
-  elif intA > intB:
-    intA = intA - intB
-  else:
-    intB = intB - intA
-  if intB == 0:
-    ctx.send(f"{intA}")
-  elif intA > intB:
-    intA = intA - intB
-  else:
-    intB = intB - intA
-    if intB != 0:
-      ctx.send("GCD not calculable at this moment.")
+  global def modulo = intA % intB
+  global def split = int(intA/intB)
+
+  while modulo != 0:
+    intA = intB
+    intB = modulo
+    split = int(intA/intB)
+    modulo = intA - (intB * split)
+
+    ctx.send(intB)
   #await step1()
 
 '''def step1(){
@@ -1060,3 +1014,5 @@ client.run('ODAyMjU2ODY3Mjg4MDIzMDUx.YAsl7g.5Z6E_SyEnKzj-DHPBITA0FKYJ94')
   # https://www.youtube.com/watch?v=TaQq9Il5ifQ
 # https://www.semicolonworld.com/question/62321/move-all-members-in-a-channel-to-another-with-discord-py
 # https://stackoverflow.com/questions/55149372/discord-py-tag-a-random-user/55150213
+# https://en.wikipedia.org/wiki/Euclidean_algorithm
+# https://stackoverflow.com/questions/21608593/euclidean-algorithm-gcd-in-python
