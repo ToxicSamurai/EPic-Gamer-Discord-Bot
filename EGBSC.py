@@ -33,8 +33,8 @@ turn = ""
 gameOver = True
 # variables for tic-tac-toe
 
-intA = int
-intB = int
+intA = 2
+intB = 2
 modulo = int(intA - (intB)*int(intA/intB))
 split = int(intA/intB)
 # variables for euclid's algorithm
