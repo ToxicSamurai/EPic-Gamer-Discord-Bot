@@ -495,6 +495,10 @@ async def rejoinbtp(ctx):
   await ctx.send("https://discord.gg/UXZqCguJK6")
 
 @client.command()
+async def rejoines(ctx):
+  await ctx.send("https://discord.gg/gAnKjFqgWZ")
+
+@client.command()
 async def apiref(ctx):
   await ctx.send("https://discordpy.readthedocs.io/en/stable/api.html")
 
