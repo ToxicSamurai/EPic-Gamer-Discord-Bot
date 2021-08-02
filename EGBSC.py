@@ -850,7 +850,7 @@ async def moveTest(ctx, member: discord.Member):
 # euclid's algorithm commands----------------------------------------------
 @client.command()
 async def euclid(ctx, intA : int, intB : int):
-  step1()
+  await step1()
 
 def step1(){
   if intB == 0:
