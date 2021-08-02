@@ -847,6 +847,47 @@ async def moveTest(ctx, member: discord.Member):
     #await ctx.send("worker.1 reports: commands.CommandInvokeError!")
 # unused error handler for moveTest as of 7/13/21
 
+# euclid's algorithm commands----------------------------------------------
+@client.command()
+async def euclid(ctx, intA : int, intB : int):
+  step1()
+
+def step1(){
+  if intB == 0:
+    step7()
+  else:
+    step2()
+}
+
+def step2(){
+  if intA > intB:
+    step5()
+  else:
+    step3()
+}
+
+def step3(){
+  intB = intB - intA
+  step4()
+}
+
+def step4(){
+  step1()
+}
+
+def step5(){
+  intA = intA - intB
+  step6()
+}
+
+def step6(){
+  step1()
+}
+
+def step7(){
+  ctx.send(f"{intA}")
+}
+
 # suggestion commands----------------------------------------------
 @client.command()
 async def suggest(ctx, suggestion : str):
