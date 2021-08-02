@@ -4,6 +4,7 @@ import youtube_dl
 import asyncio
 import os
 import pymongo
+import math
 from random import choice
 from pymongo import MongoClient
 from youtube_dl import YoutubeDL
