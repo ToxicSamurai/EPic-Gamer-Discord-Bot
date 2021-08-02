@@ -854,8 +854,8 @@ async def moveTest(ctx, member: discord.Member):
 # euclid's algorithm commands----------------------------------------------
 @client.command()
 async def euclid(ctx, intA : int, intB : int):
-  global def modulo = intA % intB
-  global def split = int(intA/intB)
+  global modulo = intA % intB
+  global split = int(intA/intB)
 
   while modulo != 0:
     intA = intB
