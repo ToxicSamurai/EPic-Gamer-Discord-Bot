@@ -850,9 +850,65 @@ async def moveTest(ctx, member: discord.Member):
 # euclid's algorithm commands----------------------------------------------
 @client.command()
 async def euclid(ctx, intA : int, intB : int):
-  await step1()
+  if intB == 0:
+    ctx.send(f"{intA}")
+  elif intA > intB:
+    intA = intA - intB
+  else:
+    intB = intB - intA
+  if intB == 0:
+    ctx.send(f"{intA}")
+  elif intA > intB:
+    intA = intA - intB
+  else:
+    intB = intB - intA
+  if intB == 0:
+    ctx.send(f"{intA}")
+  elif intA > intB:
+    intA = intA - intB
+  else:
+    intB = intB - intA
+  if intB == 0:
+    ctx.send(f"{intA}")
+  elif intA > intB:
+    intA = intA - intB
+  else:
+    intB = intB - intA
+  if intB == 0:
+    ctx.send(f"{intA}")
+  elif intA > intB:
+    intA = intA - intB
+  else:
+    intB = intB - intA
+  if intB == 0:
+    ctx.send(f"{intA}")
+  elif intA > intB:
+    intA = intA - intB
+  else:
+    intB = intB - intA
+  if intB == 0:
+    ctx.send(f"{intA}")
+  elif intA > intB:
+    intA = intA - intB
+  else:
+    intB = intB - intA
+  if intB == 0:
+    ctx.send(f"{intA}")
+  elif intA > intB:
+    intA = intA - intB
+  else:
+    intB = intB - intA
+  if intB == 0:
+    ctx.send(f"{intA}")
+  elif intA > intB:
+    intA = intA - intB
+  else:
+    intB = intB - intA
+    if intB != 0:
+      ctx.sent("GCD not calculable at this moment.")
+  #await step1()
 
-def step1(ctx){
+'''def step1(){
   if intB == 0:
     step7()
   else:
@@ -886,7 +942,7 @@ def step6(){
 
 def step7(){
   ctx.send(f"{intA}")
-}
+}'''
 
 # suggestion commands----------------------------------------------
 @client.command()
