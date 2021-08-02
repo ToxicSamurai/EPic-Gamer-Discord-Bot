@@ -563,7 +563,7 @@ async def deadchat(ctx):
 
 @client.command()
 async def github(ctx):
-  ctx.send("https://github.com/ToxicSamurai")
+  await ctx.send("https://github.com/ToxicSamurai")
 
 # vc commands----------------------------------------------
 @client.command()
