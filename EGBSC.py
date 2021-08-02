@@ -893,18 +893,6 @@ async def suggest(ctx, suggestion : str):
 # unused as of 7/12/21
 
 # database commands----------------------------------------------
-@client.command()
-async def pingTest(ctx):
-  mongo_url = "mongodb+srv://ToxicSamurai:nQdQURG6PXm6Qyx@epicgamerbotdb.qqcgu.mongodb.net/EpicGamerBotDB?retryWrites=true&w=majority"
-  cluster = MongoClient(mongo_url)
-  db = cluster["EpicGamerBotDB"]
-  collection = db["EconomyBank"]
-  # initilizes MongoDB
-
-  pingTest_cm = {"command":1}
-  collection.insert_one(pingTest_cm)
-
-  await ctx.channel.send("Ping sent to database")
 # unused as of 7/7/21
 
 #@client.command()
