@@ -497,15 +497,15 @@ async def navyseals(ctx):
 
 @client.command()
 async def rejoin(ctx):
-  await ctx.send("https://discord.gg/4TZE3SWFMw")
+  await ctx.send("")
 
 @client.command()
 async def rejoinbtp(ctx):
-  await ctx.send("https://discord.gg/UXZqCguJK6")
+  await ctx.send("")
 
 @client.command()
 async def rejoines(ctx):
-  await ctx.send("https://discord.gg/gAnKjFqgWZ")
+  await ctx.send("")
 
 @client.command()
 async def apiref(ctx):
