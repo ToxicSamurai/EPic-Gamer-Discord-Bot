@@ -1,4 +1,4 @@
-# You may use any part of this code, however you may not use the entire thing and you must credit me and the sources listed at the bottom in your code
+# License in README file
 
 import discord
 import random
