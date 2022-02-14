@@ -915,7 +915,7 @@ async def pingTest(ctx):
   #await ctx.send("There were {} messages in {}".format(count, channel.mention))
 # https://stackoverflow.com/questions/52214425/how-to-get-how-many-messages-has-been-sent-in-a-channel
 
-client.run('Your Token Here')
+client.run('ODAyMjU2ODY3Mjg4MDIzMDUx.YAsl7g.J3IxXmHg_XICdddBjeOriJ6kGlY')
 
 #steps to push to Heroku
 # Go to save repo
